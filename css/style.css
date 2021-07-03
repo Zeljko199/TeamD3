@@ -70,11 +70,50 @@ img{
 }
 
 /*==================== NAV ====================*/
-
-
-/* show menu */
-
-
+.navbar-nav li{
+    padding: 0 10px;
+}
+.navbar-nav li a{
+    float: right;
+    text-align: left;
+}
+nav ul li a:hover{
+    color:steelblue!important;
+}
+.navbar{
+    background: black!important;
+    opacity: 80%;
+}
+.navbar-toggler{
+    border: none!important;
+}
+.nav-link{
+    color: #fff!important;
+    font-weight: var(--font-medium);
+    font-size: 16px;
+}
+/*============= Slajder =================== */
+#slajder{
+    width: 100%;
+}
+.carousel-caption{
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial!important;
+}
+.carousel-caption h5{
+    color: white;
+    font-size: 42px;
+}
+.carousel-inner{
+    max-width: 100%;
+}
+.carousel-caption{
+    position: absolute;
+}
+.carousel-item img {
+    height: 100vh;
+}
 /* Active link */
 
 

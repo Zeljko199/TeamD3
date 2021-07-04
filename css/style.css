@@ -114,12 +114,10 @@ nav ul li a:hover{
 .carousel-item img {
     height: 100vh;
 }
-/* Active link */
 
-
-/* Change background header */
-
-
+#odgovor {
+    box-shadow: 0 0 15px 0 rgba(255, 137, 3, 0.61);
+  }
 /*==================== HOME ====================*/
 
 

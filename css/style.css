@@ -115,45 +115,52 @@ nav ul li a:hover{
     height: 100vh;
 }
 
+#Naslov{
+    position: relative;
+    width: 50%;
+    text-align: center;
+}
+#Naslov h1{
+    position: relative;
+    box-shadow: 0 0 10px #ff8c3b,
+                0 0 40px #ff8c3b,
+                0 0 80px #ff8c3b,
+                0 0 160px #ff8c3b,
+                0 0 240px #ff8c3b;
+}
+
 #odgovor {
     box-shadow: 0 0 15px 0 rgba(255, 137, 3, 0.61);
   }
-/*==================== HOME ====================*/
-
-
-/*==================== BUTTONS ====================*/
-
-
-/*==================== ABOUT ====================*/
-
-
-/*==================== SKILLS ====================*/
-
-
-/*==================== QUALIFICATION ====================*/
-
-
-/*==================== SERVICES ====================*/
-
-
-/* Active Modal */
-
-
-/*==================== PORTFOLIO ====================*/
-
-
-/*==================== PROJECT IN MIND ====================*/
-
-
-/*==================== TESTIMONIAL ====================*/
-
-
-/*==================== CONTACT ME ====================*/
-
 
 /*==================== FOOTER ====================*/
-
-
+.footer{
+    background-image: linear-gradient(to right, #000, #E6762C);
+    color: #fff;
+}
+.footer-img{
+    width: 100%;
+}
+.footer-box{
+    padding: 20px;
+}
+.footer-box img{
+    width: 120px;
+    margin-bottom: 20px;
+}
+#social-icons img{
+    width: 60px;
+    transition: 0.5s;
+}
+#social-icons a:hover img{
+    transform: translateY(-10px);
+}
+#social-icons a{
+    padding: 2%;
+}
+#prava{
+    font-size: 20px;
+}
 /*========== SCROLL UP ==========*/
 
 

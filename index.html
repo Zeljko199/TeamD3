@@ -1,193 +1,201 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Zeljko Milovanovic">
-    <meta name="author" content="Jovana Bulatovic">
-    <meta name="description" content="Ovaj sajt je kreiran kao projektni zadatak iz predmeta web tehnologije na Fakultetu tehničkih nauka u Čačku.">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <link rel="icon" type="image/png" href="https://d3js.org/favicon.png" sizes="400x400">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <title>TeamD3</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Zeljko Milovanovic">
+  <meta name="author" content="Jovana Bulatovic">
+  <meta name="description"
+    content="Ovaj sajt je kreiran kao projektni zadatak iz predmeta web tehnologije na Fakultetu tehničkih nauka u Čačku.">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <script src="js/script.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="icon" type="image/png" href="https://d3js.org/favicon.png" sizes="400x400">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" type="text/css" href="inspector.css">
+  <title>TeamD3</title>
 </head>
-    <!--========= NAVBAR ===========-->
-<header> 
-    <nav class="navbar navbar-expand-sm navbar-dark bg-danger fixed-top">
-        <div class="container">
-            <a href="https://d3js.org/" target="_blank"><img id="brand-logo" src="img/d3.png" alt=""></a>
-        <a href="index.html" id="brand" class="navbar-brand ml-3"><b>Data-Driven Documents</b></a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
-            <li class="nav-item underlineEffect">
-                <a href="index.html" class="nav-link">Početna</a>
-            </li>
-            <li class="nav-item underlineEffect">
-                <a href="about.html" class="nav-link">ABOUT</a>
-            </li>
-            <li class="nav-item underlineEffect">
-                <a href="services.html" class="nav-link">EXAMPLES</a>
-            </li>
-            <li class="nav-item underlineEffect">
-                <a href="team.html" class="nav-link">TEAM</a>
-            </li>
-            <li class="nav-item underlineEffect">
-                <a href="contact.html" class="nav-link">CONTACT</a>
-            </li>
-            </ul>
-        </div>
-        </div>
-    </nav>
-</header> 
+<!--========= NAVBAR ===========-->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a href="https://d3js.org/" target="_blank"><img id="brand-logo" src="img/d3.png" alt=""></a>
+      <a href="index.html" id="brand" class="navbar-brand ml-3"><b>Data-Driven Documents</b></a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item underlineEffect">
+            <a href="index.html" class="nav-link">Početna</a>
+          </li>
+          <li class="nav-item underlineEffect">
+            <a href="about.html" class="nav-link">D3</a>
+          </li>
+          <li class="nav-item underlineEffect">
+            <a href="services.html" class="nav-link">Primena</a>
+          </li>
+          <li class="nav-item underlineEffect">
+            <a href="team.html" class="nav-link">Galerija</a>
+          </li>
+          <li class="nav-item underlineEffect">
+            <a href="contact.html" class="nav-link">O autorima</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
 
 <body>
-    <!--==================== Slajder =================-->
-    <div class="container-fluid p-0">
+  <!--==================== Slajder =================-->
+  <div class="container-fluid p-0">
     <div id="slajder">
-        <div id="headerSlider" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#headerSlider" data-slide-to="0" class="active first"></li>
-              <li data-target="#headerSlider" data-slide-to="1" class="second"></li>
-              <li data-target="#headerSlider" data-slide-to="2" class="third"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active" id="first-slide">
-                <img class="d-block w-100" src="img/8.webp" alt="First slide">
-                <div class="carousel-caption">
-                    <div class="row">
-                        <div class="col-lg-4 m-auto pb-5">
-                            <img src="img/web.png" style="max-width: 100%; height: auto;" alt="">
-                        </div>
-                    </div>
-                    <h2>Projektni zadatak</h2>
-                    <h2>Web tehnologije - FTN Čačak</h2>
+      <div id="headerSlider" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#headerSlider" data-slide-to="0" class="active first"></li>
+          <li data-target="#headerSlider" data-slide-to="1" class="second"></li>
+          <li data-target="#headerSlider" data-slide-to="2" class="third"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active" id="first-slide">
+            <img class="d-block w-100" src="img/8.webp" alt="First slide">
+            <div class="carousel-caption">
+              <div class="row">
+                <div class="col-lg-4 m-auto pb-5">
+                  <img src="img/web.png" style="max-width: 100%; height: auto;" alt="">
                 </div>
               </div>
-              <div class="carousel-item" id="second-slide">
-                <img class="d-block w-100" src="img/8.webp" alt="Second slide">
-                <div class="carousel-caption">
-                    <div class="row">
-                        <div class="col-lg-4 m-auto">
-                            <img src="img/d3.png" style="max-width: 100%; height: auto;" alt="">
-                        </div>
-                    </div>
-                    <h2 class="mb-3 pt-5">D3.js</h2>
-                    <p>JavaScript biblioteka za manipulisanje sa dokumentima zasnovanim na podacima</p>
-                </div>
-              </div>
-              <div class="carousel-item" id="third-slide">
-                <img class="d-block w-100" src="img/8.webp" alt="Third slide">
-                <div class="carousel-caption">
-                    <div class="row">
-                        <div class="col-lg-4 m-auto">
-                            <img src="img/html.png" style="max-width: 100%; height: auto;" alt="">
-                        </div>
-                    </div>
-                    <h2 class="mb-3 pt-5">Pristupačnost</h2>
-                    <p>Korišćenje HTML, CSS i JavaScript-a.</p>
-                </div>
-              </div>
+              <h2>Projektni zadatak</h2>
+              <h2>Web tehnologije - FTN Čačak</h2>
             </div>
-            <a class="carousel-control-prev" href="#headerSlider" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#headerSlider" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
           </div>
-    </div>
-</div>
-<!--=============== Sta je D3 ============-->
-<div class="bg-dark text-center py-3 mb-5">
-    <div class="container">
-      <h1 class="font-weight-light text-white pt-3">Šta je D3.js?</h1>
+          <div class="carousel-item" id="second-slide">
+            <img class="d-block w-100" src="img/8.webp" alt="Second slide">
+            <div class="carousel-caption">
+              <div class="row">
+                <div class="col-lg-4 m-auto">
+                  <img src="img/d3.png" style="max-width: 100%; height: auto;" alt="">
+                </div>
+              </div>
+              <h2 class="mb-3 pt-5">D3.js</h2>
+              <p>JavaScript biblioteka za manipulisanje sa dokumentima zasnovanim na podacima</p>
+            </div>
+          </div>
+          <div class="carousel-item" id="third-slide">
+            <img class="d-block w-100" src="img/8.webp" alt="Third slide">
+            <div class="carousel-caption">
+              <div class="row">
+                <div class="col-lg-4 m-auto">
+                  <img src="img/html.png" style="max-width: 100%; height: auto;" alt="">
+                </div>
+              </div>
+              <h2 class="mb-3 pt-5">Pristupačnost</h2>
+              <p>Korišćenje HTML, CSS i JavaScript-a.</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#headerSlider" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#headerSlider" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
   </div>
-<!--=============== D3 ============-->
+  <!--=============== Sta je D3 ============-->
+  <div class="bg-dark text-center py-3 mb-5">
+    <div class="container" id="Naslov">
+      <h1 class="font-weight-light text-white py-3">Šta je D3.js?</h1>
+    </div>
+  </div>
+  <!--=============== D3 ============-->
   <div class="container text-justify border rounded" id="odgovor">
     <div class="row d-flex">
       <div class="col-lg-8 m-auto p-5">
-        <p>D3 ili D3.js je JavaScript biblioteka koja se koristi za vizualizaciju podataka pomoću web standarda. D3 nam pomaže da oživimo i učinimo zanimljivijim podatke koristeći SVG, Canvas i HTML.</p>
-        <p>Takođe, D3.js kombinuje moćne tehnike vizuelizacije i interakcije sa pristupom DOM manipulaciji na osnovu podataka, pružajući vam pune mogućnosti savremenih pregledača i slobodu da dizajnirate pravi vizuelni interfejs za sve vaše podatke.</p>
-        <p>D3 je kolekcija modula koji su dizajnirani za zajednički rad; možete koristiti module samostalno ili ih možete koristiti zajedno kao deo podrazumevane verzije. Vizualizacije se obično sastoje od diskretnih grafičkih oznaka, kao što su: <li>Simboli</li><li>Uglovi</li><li>Linije</li><li>Grafikoni</li><li>Veze</li><br> Kao i kod ostalih aspekata D3, i ove oblike pokreću podaci: svaki generator oblika razotkriva naloge sa pristupom koji kontrolišu kako se ulazni podaci manipulisanjem vizuelno predstavljaju. </p>    
+        <p>D3 ili D3.js je JavaScript biblioteka koja se koristi za vizualizaciju podataka pomoću web standarda. D3 nam
+          pomaže da oživimo i učinimo zanimljivijim podatke koristeći SVG, Canvas i HTML.</p>
+        <p>Takođe, D3.js kombinuje moćne tehnike vizuelizacije i interakcije sa pristupom DOM manipulaciji na osnovu
+          podataka, pružajući vam pune mogućnosti savremenih pregledača i slobodu da dizajnirate pravi vizuelni
+          interfejs za sve vaše podatke.</p>
+        <p>D3 je kolekcija modula koji su dizajnirani za zajednički rad; možete koristiti module samostalno ili ih
+          možete koristiti zajedno kao deo podrazumevane verzije. Vizualizacije se obično sastoje od diskretnih
+          grafičkih oznaka, kao što su: <li>Simboli</li>
+          <li>Uglovi</li>
+          <li>Linije</li>
+          <li>Grafikoni</li>
+          <li>Veze</li><br> Kao i kod ostalih aspekata D3, i ove oblike pokreću podaci: svaki generator oblika
+          razotkriva naloge sa pristupom koji kontrolišu kako se ulazni podaci manipulisanjem vizuelno predstavljaju.
+        </p>
       </div>
       <div class="col-lg-4 my-auto pl-5">
         <img src="img/d3.png" id="logo" class="image-responsive p-0" style="width: 100%; height: auto;" alt="">
       </div>
-    </div>   
+    </div>
   </div>
   <br><br>
-        <!--==================== HOME ====================-->
-        <section class="home section" id="home">
-            
-        </section>
 
-        <!--==================== ABOUT ====================-->
-        <section class="about section" id="about">
+  <script type="module">
 
+    import define from "./index.js";
+    import {Runtime, Library, Inspector} from "./runtime.js";
     
-        </section>
-
-        <!--==================== SKILLS ====================-->
-        <section class="skills section" id="skills">
-
-
-        </section>
-
-        <!--==================== QUALIFICATION ====================-->
-        <section class="qualification section">
-
-
-        </section>
-
-        <!--==================== SERVICES ====================-->
-        <section class="services section" id="services">
-            
-
-        </section>
-
-        <!--==================== PORTFOLIO ====================-->
-        <section class="portfolio section" id="portfolio">
-            
-
-        </section>
-
-        <!--==================== PROJECT IN MIND ====================-->
-        <section class="project section">
-
-
-        </section>
-
-        <!--==================== TESTIMONIAL ====================-->
-        <section class="testimonial section">
-            
-
-        </section>
-
-        <!--==================== CONTACT ME ====================-->
-        <section class="contact section" id="contact">
-
-
-        </section>
-
-    <!--==================== FOOTER ====================-->
-    <footer class="footer">
-
-        
-    </footer>
+    const runtime = new Runtime();
+    const main = runtime.module(define, Inspector.into(document.body));
     
-    <!--==================== SCROLL TOP ====================-->
-    
-    <script src="js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </script>
+
+  <!--==================== FOOTER ====================-->
+  <footer class="footer">
+    <img src="img/wave2.png" class="footer-img">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 footer-box">
+          <h2>O PROJEKTU</h2>
+          <p>Ovaj sajt je napravljen zbog projektnog zadatka iz predmeta Veb tehnologije na Fakultetu tehničkih nauka u
+            Čačku. U izradi ovog sajta su učestvovali Željko Milovanović i Jovana Bulatović. Tema ovog projektog rada je
+            D3.js.</p>
+        </div>
+        <div class="col-md-6 footer-box">
+          <img src="img/d3.png" class="ml-5">
+        </div>
+      </div>
+    </div>
+
+    <hr>
+<div class="container text-center" id="social-icons">
+    <!-- Ikonice za društvene mreže -->
+      <a href="https://www.facebook.com/DataDrivenDocuments/" target="_blank"><img src="img/facebook-icon.png"></a>
+      <a href="https://www.instagram.com/explore/tags/d3js/" target="_blank"><img src="img/instagram-icon.png"></a>
+      <a href="https://twitter.com/d3js_org" target="_blank"><img src="img/twitter-icon.png"></a>
+      <a href="https://www.youtube.com/watch?v=_8V5o2UHG0E&ab_channel=freeCodeCamp.org" target="_blank"><img src="img/youtube-icon.png"></a>
+  </div>
+
+    <hr>
+    <div class="p-4 text-center text-white" id="prava">
+      <b>© 2021 Sva prava zadržana: TeamD3</b>
+    </div>
+  </footer>
+
+  <!--==================== SCROLL TOP ====================-->
+
+  <script src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

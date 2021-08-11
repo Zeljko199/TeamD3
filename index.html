@@ -141,17 +141,55 @@
     </div>
   </div>
   <br><br>
-
-  <script type="module">
-
-    import define from "./index.js";
-    import {Runtime, Library, Inspector} from "./runtime.js";
-    
-    const runtime = new Runtime();
-    const main = runtime.module(define, Inspector.into(document.body));
-    
-    </script>
-
+<!--==================== Dodaci ====================-->
+<div class="container-fluid bg-light text-dark" id="dodaci">
+  <div class="text-center">
+    <h1>TEHNOLOGIJE</h1>
+    <h4>korišćene za realizaciju ovog projekta:</h4>
+  </div>
+  <div class="row text-center py-5">
+    <div class="col-6">
+      <div class="row">
+      <div class="col-4">
+      <h2>Visual Studio Code</h2>
+      <p class="text-justify">Multiprogramski editor za uređivanje izvornog koda, fokusiran prvenstveno na razvoj veb stranica, koji sadrži veliki broj dostupnih biblioteka i ekstenzija za olakšan rad i dodatne mogućnosti.</p>
+      <div class="visual">
+        <a class="btn btn-dark" href="https://code.visualstudio.com" role="button" target="_blank" data-tag="vs-button-text">Posetite Visual Studio Code</a>
+    </div>
+    </div>
+    <div class="col-8">
+      <img id="visual" src="img/visual.png" alt="Visual Studio Code">
+    </div>
+  </div>
+    </div>
+    <div class="col-6">
+      <div class="row">
+      <div class="col-4">
+      <h2>GitHub</h2>
+      <p class="text-justify">Platforma koja je u samom vrhu za upravljanje verzijama izvornog koda uz pomoć Git sistema, neizostavna za uspešan rad i završavanje projekata.</p>
+      <div class="github">
+        <a class="btn btn-dark " href="https://github.com" role="button" target="_blank" data-tag="git-button-text">Posetite GitHub</a>
+    </div>
+    </div>
+    <div class="col-8">
+      <img src="img/github.png" alt="GitHub">
+    </div>
+  </div>
+    </div>
+    <div class="col-4 col-sm-4 col-md-4">
+      <img class="htmlcssjs" src="img/html2.png" alt="HTML">
+      <p>HTML - osnova interneta. Jezik iza bilo koje veb stranice</p>
+    </div>
+    <div class="col-4 col-sm-4 col-md-4">
+      <img class="htmlcssjs" src="img/css3.png" alt="CSS">
+      <p>CSS - stilizovanje i ulepšavanje osnova. Omogućava primenu stilova na elemente kreirane korišćenjem HTML-a.</p>
+    </div>
+    <div class="col-4 col-sm-4 col-md-4">
+      <img class="htmlcssjs" src="img/js.png" alt="JS">
+      <p>JavaScript - oživljavanje osnove. Omogućava interaktivnost na veb stranicama.</p>
+    </div>
+  </div>
+</div>
   <!--==================== FOOTER ====================-->
   <footer class="footer">
     <img src="img/wave2.png" class="footer-img">
@@ -180,7 +218,7 @@
 
     <hr>
     <div class="p-4 text-center text-white" id="prava">
-      <b>© 2021 Sva prava zadržana: TeamD3</b>
+      <b>© 2021 Sva prava zadržava: TeamD3</b>
     </div>
   </footer>
 

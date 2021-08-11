@@ -132,7 +132,18 @@ nav ul li a:hover{
 #odgovor {
     box-shadow: 0 0 15px 0 rgba(255, 137, 3, 0.61);
   }
-
+/*==================== Dodaci ====================*/
+#dodaci{
+    padding: 4%;
+}
+.htmlcssjs{
+    height: 15rem;
+    width: 15rem;
+    margin-top: 100px;
+}
+#visual{
+    
+}
 /*==================== FOOTER ====================*/
 .footer{
     background-image: linear-gradient(to right, #000, #E6762C);

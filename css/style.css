@@ -1,6 +1,9 @@
 /*  Fontovi   */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+@import './navbar.css';
+@import './footer.css';
+
 :root{
     --header-height: 3rem;
 
@@ -69,29 +72,7 @@ img{
     gap: 1.5rem; /* rastojanje izmedju dugmadi*/
 }
 
-/*==================== NAV ====================*/
-.navbar-nav li{
-    padding: 0 10px;
-}
-.navbar-nav li a{
-    float: right;
-    text-align: left;
-}
-nav ul li a:hover{
-    color:steelblue!important;
-}
-.navbar{
-    background: black!important;
-    opacity: 80%;
-}
-.navbar-toggler{
-    border: none!important;
-}
-.nav-link{
-    color: #fff!important;
-    font-weight: var(--font-medium);
-    font-size: 16px;
-}
+
 /*============= Slajder =================== */
 #slajder{
     width: 100%;
@@ -141,37 +122,7 @@ nav ul li a:hover{
     width: 15rem;
     margin-top: 100px;
 }
-#visual{
-    
-}
-/*==================== FOOTER ====================*/
-.footer{
-    background-image: linear-gradient(to right, #000, #E6762C);
-    color: #fff;
-}
-.footer-img{
-    width: 100%;
-}
-.footer-box{
-    padding: 20px;
-}
-.footer-box img{
-    width: 120px;
-    margin-bottom: 20px;
-}
-#social-icons img{
-    width: 60px;
-    transition: 0.5s;
-}
-#social-icons a:hover img{
-    transform: translateY(-10px);
-}
-#social-icons a{
-    padding: 2%;
-}
-#prava{
-    font-size: 20px;
-}
+
 /*========== SCROLL UP ==========*/
 
 

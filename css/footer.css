@@ -1,0 +1,28 @@
+/*==================== FOOTER ====================*/
+.footer{
+    background-image: linear-gradient(to right, #000, #E6762C);
+    color: #fff;
+}
+.footer-img{
+    width: 100%;
+}
+.footer-box{
+    padding: 20px;
+}
+.footer-box img{
+    width: 120px;
+    margin-bottom: 20px;
+}
+#social-icons img{
+    width: 60px;
+    transition: 0.5s;
+}
+#social-icons a:hover img{
+    transform: translateY(-10px);
+}
+#social-icons a{
+    padding: 2%;
+}
+#prava{
+    font-size: 20px;
+}

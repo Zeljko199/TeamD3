@@ -3,7 +3,6 @@
 *{
     margin: 0;
     padding: 0;
-    
     margin-bottom: 0 !important;
 }
 .hero{
@@ -87,3 +86,4 @@
     animation: stroke 0.8s linear;
     animation-fill-mode: forwards;
 }
+

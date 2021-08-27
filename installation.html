@@ -1,0 +1,157 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Zeljko Milovanovic">
+  <meta name="author" content="Jovana Bulatovic">
+  <meta name="description"
+    content="Ovaj sajt je kreiran kao projektni zadatak iz predmeta web tehnologije na Fakultetu tehničkih nauka u Čačku.">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/installation.css">  
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <script src="js/script.js"></script>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <link rel="icon" type="image/png" href="https://d3js.org/favicon.png" sizes="400x400">
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+  <title>TeamD3</title>
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a href="https://d3js.org/" target="_blank"><img id="brand-logo" src="img/d3.png" alt=""></a>
+        <a href="index.html" id="brand" class="navbar-brand ml-3"><b>Data-Driven Documents</b></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item underlineEffect">
+              <a href="index.html" class="nav-link">Početna</a>
+            </li>
+            <li class="nav-item underlineEffect">
+              <a href="instalation.html" class="nav-link">Instalacija</a>
+            </li>
+            <li class="nav-item underlineEffect">
+              <a href="services.html" class="nav-link">Primena</a>
+            </li>
+            <li class="nav-item underlineEffect">
+              <a href="team.html" class="nav-link">Galerija</a>
+            </li>
+            <li class="nav-item underlineEffect">
+              <a href="about_us.html" class="nav-link">O autorima</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>
+<body>
+
+
+   <div class="container-fluid py-5 first">
+        <div class="container mb-4 py-4">
+          <p>
+            Kako bismo uključili biblioteku D3.js na HTML web stranicu i koristili D3.js za kreiranje vizualizacije podataka. To možemo učiniti na dva načina
+          </p>
+          <ul>
+            <li>1) Uključicvanje biblioteke D3.js iz foldera projekta</li>
+            <li>2) Uključivanje biblioteke D3.js iz CDN(Content Delivert Network)</li>
+          </ul>
+          <br>
+          <div class="">
+            <p>Ako koristite npm, npm instalirajte d3. Takođe možete preuzeti najnovije izdanje na GitHub -u. Za vanilin HTML u savremenim pregledačima, uvezite D3 iz Skipack -a:</p>
+            <p class="code">
+              <em><span># </span>  </em>
+            </p>
+              <br>
+            <div>
+              <p>
+                Za stara okruženja, možete učitati D3-ov UMD paket sa npm zasnovanog CDN-a, poput jsDelivr; d3 global se izvozi:
+              </p>
+              <p class="code">
+                <em><span> </span>  </em>
+              </p>
+            </div>
+
+            <div>
+              <p>D3 je napisan pomoću modula ES2015. Napravite prilagođeni paket koristeći Rollup, Vebpack ili željeni paket. 
+                Da biste uvezli D3 u aplikaciju ES2015, ili uvezite određene simbole iz određenih D3 modula:</p>
+              <p class="code">
+                <em><span>import {scaleLinear} from "d3-scale"; </span>  </em>
+              </p>
+              <p>Ili importujte sve u prostor imena (ovde, d3):</p>
+
+              <div class="code">
+                <em><span>import * as d3 from "d3";</span>  </em>
+              </div>
+
+              <p>Ili pomoću dinamičkog importovanja:</p>
+
+              <div class="code">
+                <em><span>const d3 = await import("d3");</span>  </em>
+              </div>
+
+            </div>
+            
+          </div>
+        </div>
+   </div>
+
+
+
+
+<!-- FOOTERRRR -->
+   <footer class="footer">
+    <img src="img/wave2.png" class="footer-img">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 footer-box">
+        </div>
+      </div>
+    </div>
+
+    <hr>
+<div class="container text-center" id="social-icons">
+    <!-- Ikonice za društvene mreže -->
+      <a href="https://www.facebook.com/DataDrivenDocuments/" target="_blank"><img src="img/facebook-icon.png"></a>
+      <a href="https://www.instagram.com/explore/tags/d3js/" target="_blank"><img src="img/instagram-icon.png"></a>
+      <a href="https://twitter.com/d3js_org" target="_blank"><img src="img/twitter-icon.png"></a>
+      <a href="https://www.youtube.com/watch?v=_8V5o2UHG0E&ab_channel=freeCodeCamp.org" target="_blank"><img src="img/youtube-icon.png"></a>
+  </div>
+
+    <hr>
+    <div class="p-4 text-center text-white" id="prava">
+      <b>© 2021 Sva prava zadržava: TeamD3</b>
+    </div>
+  </footer>
+
+
+<script src="js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -63,50 +63,80 @@
 </header>
 <body>
 
+  
 
    <div class="container-fluid py-5 first">
         <div class="container mb-4 py-4">
+          <h1 class="ml6 text-center">
+            <span class="text-wrapper ">
+              <span class="letters title-main ">INSTALACIJA D3.js</span> 
+            </span> <hr>
+          </h1> <br>
+            
           <p>
             Kako bismo uključili biblioteku D3.js na HTML web stranicu i koristili D3.js za kreiranje vizualizacije podataka. To možemo učiniti na dva načina
-          </p>
+          </p> <br>
           <ul>
-            <li>1) Uključicvanje biblioteke D3.js iz foldera projekta</li>
-            <li>2) Uključivanje biblioteke D3.js iz CDN(Content Delivert Network)</li>
-          </ul>
+            <li>&nbsp&nbsp 1) Uključicvanje biblioteke D3.js iz foldera projekta</li>
+            <li>&nbsp&nbsp 2) Uključivanje biblioteke D3.js iz CDN(Content Delivert Network)</li>
+          </ul> <hr>
           <br>
           <div class="">
-            <p>Ako koristite npm, npm instalirajte d3. Takođe možete preuzeti najnovije izdanje na GitHub -u. Za vanilin HTML u savremenim pregledačima, uvezite D3 iz Skipack -a:</p>
-            <p class="code">
-              <em><span># </span>  </em>
+            <p>Ako koristite npm, npm instalirajte d3. Takođe možete preuzeti najnovije izdanje na GitHub -u. Za vanilin HTML u savremenim pregledačima, uvezite D3 iz Skipack -a:</p> <br>
+           
+            <p class="code p-3" id="code1">
             </p>
+
+            <script defer>
+              var codet = " <script type=\"module\"> <br> &nbsp &nbsp import * as d3 from \"https://cdn.skypack.dev/d3@7\"; <br> &nbsp &nbsp const div = d3.selectAll(\"div\"); <br> <\/script>"; 
+              var text = codet.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
+
+              document.getElementById('code1').innerHTML=text;
+            </script>
               <br>
             <div>
               <p>
-                Za stara okruženja, možete učitati D3-ov UMD paket sa npm zasnovanog CDN-a, poput jsDelivr; d3 global se izvozi:
-              </p>
-              <p class="code">
-                <em><span> </span>  </em>
-              </p>
-            </div>
+                Takođe možete koristiti samostalne D3 mikro biblioteke. Na primer, d3-izbor: </p> <br>
+              <p class="code p-3" id="code2"></p>
+          
+              <script defer>
+                var codet2 = " <script type=\"module\">  <br> &nbsp &nbsp import {selectAll} from \"https://cdn.skypack.dev/d3-selection@3\"; const div = selectAll(\"div\");  <br> <\/script>"; 
+                var text = codet2.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
+  
+                document.getElementById('code2').innerHTML=text;
+              </script>
+                <br>
 
             <div>
               <p>D3 je napisan pomoću modula ES2015. Napravite prilagođeni paket koristeći Rollup, Vebpack ili željeni paket. 
-                Da biste uvezli D3 u aplikaciju ES2015, ili uvezite određene simbole iz određenih D3 modula:</p>
-              <p class="code">
-                <em><span>import {scaleLinear} from "d3-scale"; </span>  </em>
-              </p>
-              <p>Ili importujte sve u prostor imena (ovde, d3):</p>
+                Da biste uvezli D3 u aplikaciju ES2015, ili uvezite određene simbole iz određenih D3 modula:</p> <br>
+              <p class="code" id="code3"> </p>
+              <script defer>
+                var codet3 = " &nbsp&nbsp import {scaleLinear} from \"d3-scale\";"; 
+                var text = codet3.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
+  
+                document.getElementById('code3').innerHTML=text;
+              </script>
+                <br>
+              <p>Ili importujte sve u namespace: </p> <br>
 
-              <div class="code">
-                <em><span>import * as d3 from "d3";</span>  </em>
-              </div>
+              <p class="code" id="code4"> </p>
+              <script defer>
+                var codet4 = " &nbsp&nbsp import * as d3 from \"d3\";"; 
+                var text = codet4.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
+  
+                document.getElementById('code4').innerHTML=text;
+              </script> <br>
 
-              <p>Ili pomoću dinamičkog importovanja:</p>
+              <p>Ili pomoću dinamičkog importovanja:</p> <br>
 
-              <div class="code">
-                <em><span>const d3 = await import("d3");</span>  </em>
-              </div>
-
+              <p class="code" id="code5"> </p>
+              <script defer>
+                var codet5 = " &nbsp&nbsp const d3 = await import(\"d3\");"; 
+                var text = codet5.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
+  
+                document.getElementById('code5').innerHTML=text;
+              </script> <br>
             </div>
             
           </div>
@@ -141,14 +171,13 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
 <script src="js/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
   crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-  crossorigin="anonymous"></script>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
   crossorigin="anonymous"></script>

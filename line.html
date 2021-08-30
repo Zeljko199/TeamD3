@@ -1,0 +1,222 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Zeljko Milovanovic">
+  <meta name="author" content="Jovana Bulatovic">
+  <meta name="description"
+    content="Ovaj sajt je kreiran kao projektni zadatak iz predmeta web tehnologije na Fakultetu tehničkih nauka u Čačku.">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/line.css">  
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <script src="js/script.js"></script>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <link rel="icon" type="image/png" href="https://d3js.org/favicon.png" sizes="400x400">
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+ <!-- D3.JS v4 -->
+  <script src="https://d3js.org/d3.v5.js"></script>
+    
+   
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a href="https://d3js.org/" target="_blank"><img id="brand-logo" src="img/d3.png" alt=""></a>
+        <a href="index.html" id="brand" class="navbar-brand ml-3"><b>Data-Driven Documents</b></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item underlineEffect">
+              <a href="index.html" class="nav-link">Početna</a>
+            </li>
+            <li class="nav-item underlineEffect">
+              <a href="instalation.html" class="nav-link">Instalacija</a>
+            </li>
+
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="./shapes.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="true">
+              D3 shapes
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="./line.html">d3.line</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="./area.html">d3.area</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">d3.arc</a></li>
+            </ul>
+          </li>
+            <li class="nav-item underlineEffect">
+              <a href="team.html" class="nav-link">Galerija</a>
+            </li>
+            <li class="nav-item underlineEffect">
+              <a href="about_us.html" class="nav-link">O autorima</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>
+<body>
+
+  
+
+   <div class="container-fluid py-5 first">
+        <div class="container mb-4 py-4">
+          <h1 class="ml6 text-center">
+            <span class="text-wrapper ">
+              <span class="letters title-main "> d3.line </span> 
+            </span> <hr>
+          </h1> <br>
+          <p>Metoda <b>d3.line ()</b> koristi se za konstruisanje novog generatora linija sa podrazumevanim postavkama. Generator linija se zatim koristi za izradu linije.</p>
+          <br><p> <b> Sintaksa:</p> </b><br>
+          <div class="">           
+            <p class="code p-3" id="code0"> </p>
+            <script defer>
+              var codet = "d3.line();"; 
+              var text = codet.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
+
+              document.getElementById('code0').innerHTML=text;
+            </script> <br><br>
+
+            <p>
+                <b>Parametri:</b> Ova metoda ne prihvata parametre.
+                <br><br>
+                <b>Povratna vrednost:</b> Ova metoda vraća linijski generator.
+            </p>
+          <p><hr><br>
+            D3-ov generator linija proizvodi niz podataka o putanji sa nizom koordinata.<br>
+            Generator linija kreira se pomoću d3.line():          </p>
+            <br>
+          <div class="">           
+            <p class="code p-3" id="code1">
+            </p>
+            <script defer>
+              var codet = " var lineGenerator = d3.line();"; 
+              var text = codet.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
+
+              document.getElementById('code1').innerHTML=text;
+            </script> <br>
+            <p><b>d3.line ()</b> vraća funkciju koja prihvata niz koordinata i daje niz podataka putanje.</p>
+              <br><hr> <br>
+
+            <div>
+              <p>
+               Definišemo niz kooordinata </p> <br>
+              <p class="code p-3" id="code2"></p>
+              <script defer>
+                var codet2 = " var points = [<br>&nbsp&nbsp[0, 80],<br>&nbsp&nbsp[100, 100],<br>&nbsp&nbsp[200, 30],<br>&nbsp&nbsp[300, 50],<br>&nbsp&nbsp[400, 40],<br>&nbsp&nbsp[500, 80]<br>];"; 
+                var text = codet2.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
+  
+                document.getElementById('code2').innerHTML=text;
+              </script><br>
+           
+            <div>
+              <p>I potom pozivamo <b>lineGenerator</b> sa nizom kao argumentom</p> <br>
+              <p class="code" id="code3"> </p>
+              <script defer>
+                var codet3 = "&nbsp&nbspvar pathData = lineGenerator(points); &nbsp&nbsp<i> // returns \"M0,80L100,100L200,30L300,50L400,40L500,80\"</i>"; 
+                var text = codet3.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
+                document.getElementById('code3').innerHTML=text;
+              </script>
+                <br>
+              <p>lineGenerator stvara niz naredbi M (premesti u) i L (red u) iz niza tačaka. </p>
+                <br>
+              <p>Može se koristiti pathData za postavljanje d atributa elementa putanje:</p> <br>
+
+              <p class="code" id="code4"> </p>
+              <script defer>
+                var codet4 = " &nbsp&nbsp d3.select('path') <br> &nbsp&nbsp&nbsp&nbsp .attr('d', pathData);"; 
+                var text = codet4.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
+  
+                document.getElementById('code4').innerHTML=text;
+              </script> <br><br>
+
+            <svg width="800" height="110">
+                  <path></path>
+            </svg>
+              
+            </div> 
+          </div>  
+          </div>
+        </div>
+   </div>
+ </div>
+<!-- 
+    <div class="container-fluid">
+        <div class="container">
+            <svg width=100 height=100></svg>  
+        </div>
+    </div>
+
+    <div class="container">
+        <script>
+            // Draw the line segment per segment
+            d3.select("svg")
+            .append("path")
+            .attr("d", "M100 30 L200 50 L300 90 L400 20 L500 10 L600 60 L700 50 L800 30 L900 50")
+            .attr("stroke", "black")
+            .attr("fill", "none")
+        </script>
+    </div> -->
+
+
+
+<!-- FOOTERRRR -->
+   <footer class="footer">
+    <img src="img/wave2.png" class="footer-img">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 footer-box">
+        </div>
+      </div>
+    </div>
+
+    <hr>
+<div class="container text-center" id="social-icons">
+    <!-- Ikonice za društvene mreže -->
+      <a href="https://www.facebook.com/DataDrivenDocuments/" target="_blank"><img src="img/facebook-icon.png"></a>
+      <a href="https://www.instagram.com/explore/tags/d3js/" target="_blank"><img src="img/instagram-icon.png"></a>
+      <a href="https://twitter.com/d3js_org" target="_blank"><img src="img/twitter-icon.png"></a>
+      <a href="https://www.youtube.com/watch?v=_8V5o2UHG0E&ab_channel=freeCodeCamp.org" target="_blank"><img src="img/youtube-icon.png"></a>
+</div>
+
+    <hr>
+    <div class="p-4 text-center text-white" id="prava">
+      <b>© 2021 Sva prava zadržava: TeamD3</b>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+</body>
+
+</html>

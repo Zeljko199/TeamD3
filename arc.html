@@ -1,0 +1,197 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Zeljko Milovanovic">
+  <meta name="author" content="Jovana Bulatovic">
+  <meta name="description"
+    content="Ovaj sajt je kreiran kao projektni zadatak iz predmeta web tehnologije na Fakultetu tehničkih nauka u Čačku.">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/arc.css">  
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <script src="js/script.js"></script>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <link rel="icon" type="image/png" href="https://d3js.org/favicon.png" sizes="400x400">
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+ <!-- D3.JS v4 -->
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <title>D3.arc</title>
+    
+   
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a href="https://d3js.org/" target="_blank"><img id="brand-logo" src="img/d3.png" alt=""></a>
+        <a href="index.html" id="brand" class="navbar-brand ml-3"><b>Data-Driven Documents</b></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item underlineEffect">
+              <a href="index.html" class="nav-link">Početna</a>
+            </li>
+            <li class="nav-item underlineEffect">
+              <a href="instalation.html" class="nav-link">Instalacija</a>
+            </li>
+            <li class="nav-item underlineEffect">
+                <a href="#" class="nav-link">D3</a>
+              </li>
+            <li class="nav-item underlineEffect">
+              <a href="shapes.html" class="nav-link">D3 shapes</a>
+            </li>
+            <li class="nav-item underlineEffect">
+              <a href="about_us.html" class="nav-link">O autorima</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>
+<body>
+
+  
+
+   <div class="container-fluid py-5 first">
+        <div class="container mb-4 py-4">
+          <h1 class="ml6 text-center">
+            <span class="text-wrapper ">
+              <span class="letters title-main ">  d3.arc  </span> 
+            </span> <hr>
+          </h1> <br>
+            
+
+          <p>Funkcija <b>d3.arc ()</b> koristi se za generisanje generatora luka koji proizvodi kružni grafikon. Zasniva se na razlici između početnog i krajnjeg ugla.
+            <br><br>
+                <div class="gallery responsive">
+                  <a target="_blank" href="img/pie.png">
+                    <img src="img/pie.png" alt="Cinque Terre" width="600" height="400">
+                  </a>
+                  <div class="desc"></div>
+                </div>
+                      
+             <p><br> <b> Sintaksa:</p> </b><br>
+          <div class="">           
+            <p class="code p-3" id="code0"> </p>
+            <script defer>
+              var codet = "d3.arc();"; 
+              var text = codet.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
+
+              document.getElementById('code0').innerHTML=text;
+            </script> <br><br>
+            <p>
+                <b>Parametri:</b> Ova funkcija ne prihvata parametre.
+                <br><br>
+                <b>Povratna vrednost:</b> Ova funkcija vraća funkciju generatora arc.
+            </p><br>
+          <div class="">           
+            <p class="code p-3" id="code1">
+            </p>
+            <script defer>
+              var codet = "var arcGenerator = d3.arc();"; 
+              var text = codet.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
+
+              document.getElementById('code1').innerHTML=text;
+            </script> <br><br>
+            <p>Tada se može proslediti objektu koji sadrži svojstva startAngle, endAngle, innerRadius i outerRadius da bi se dobili podaci o putanji:</p>
+             <br>
+
+            <div>
+
+            
+              <p class="code p-3" id="code2"></p>
+              <script defer>
+                var codet2 = "var pathData = arcGenerator({<br>&nbsp&nbspstartAngle: 0,<br>&nbsp&nbspendAngle: 0.25 * Math.PI,<br>&nbsp&nbspinnerRadius: 50,<br>&nbsp&nbspouterRadius: 100<br>});"; 
+                var text = codet2.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
+  
+                document.getElementById('code2').innerHTML=text;
+              </script><br>
+                   <svg width="700" height="110">
+                        <g transform="translate(300, 110)"></g>
+                    </svg> <br>
+              <p style="border-left-style: solid; border-color: rgb(233, 160, 88); height: 45;  "><i> &nbsp &nbsp <b><i>startAngle</i></b> i <b><i>endAngle</i></b> se mere u smeru kazaljke na satu od 12 sati u radijanima.</i></p>
+            <br>
+            <br> <hr> <br>
+              <h3>Konfiguracija </h3><br> <hr> <br>
+               <p>
+                Možete konfigurirati innerRadius, outerRadius, startAngle, endAngle tako da ih ne morate svaki put prosljeđivati:
+                    </p> <br>
+               <p class="code" id="code4"> </p>
+                <script defer>
+                var codet4 = " &nbsp&nbsp arcGenerator<br>&nbsp&nbsp&nbsp&nbsp.innerRadius(20)<br>&nbsp&nbsp&nbsp&nbsp.outerRadius(100);<br><br>pathData = arcGenerator({<br>&nbsp&nbsp&nbsp&nbspstartAngle: 0,<br>&nbsp&nbsp&nbsp&nbspendAngle: 0.25 * Math.PI<br>&nbsp&nbsp});"; 
+                var text = codet4.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
+  
+                document.getElementById('code4').innerHTML=text;
+              </script> <br><br>
+                
+               <div>
+                   <svg width="700" height="220" ><g transform="translate(300, 110)" id="arc-code"></g> </svg>
+               </div>
+               <br>
+               <p>
+               Arc padding uzima dva parametra padAngle i padRadius koji, kada se pomnože zajedno, definišu rastojanje između susednih segmenata. Tako je u gore navedenom primeru rastojanje rastojanja 0,02 * 100 = 2. Imajte na umu da se rastojanje izračunava tako da održava (gde je moguće) granice paralelnih segmenata.
+               </p><br>
+               <p><i>Možda ćete se zapitati zašto ne postoji jedan parametar padDistance za definisanje rastojanja rastojanja. Podeljen je na dva parametra tako da generator kolača (vidi kasnije) ne mora da se bavi radijusom.</i></p>
+          
+        </div>
+          </div>
+        </div>
+   </div>
+ </div>
+
+
+
+
+<!-- FOOTERRRR -->
+   <footer class="footer">
+    <img src="img/wave2.png" class="footer-img">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 footer-box">
+        </div>
+      </div>
+    </div>
+
+    <hr>
+<div class="container text-center" id="social-icons">
+    <!-- Ikonice za društvene mreže -->
+      <a href="https://www.facebook.com/DataDrivenDocuments/" target="_blank"><img src="img/facebook-icon.png"></a>
+      <a href="https://www.instagram.com/explore/tags/d3js/" target="_blank"><img src="img/instagram-icon.png"></a>
+      <a href="https://twitter.com/d3js_org" target="_blank"><img src="img/twitter-icon.png"></a>
+      <a href="https://www.youtube.com/watch?v=_8V5o2UHG0E&ab_channel=freeCodeCamp.org" target="_blank"><img src="img/youtube-icon.png"></a>
+</div>
+
+    <hr>
+    <div class="p-4 text-center text-white" id="prava">
+      <b>© 2021 Sva prava zadržava: TeamD3</b>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+</body>
+
+</html>

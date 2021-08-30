@@ -71,3 +71,44 @@ var areaGenerator = d3.area();
     .append('path')
     .attr('d', area);
     
+// **********STRANICA ARC
+
+// kreiranje arc generatora 
+var arcGenerator = d3.arc();
+
+// generisanje path stringa
+var pathData = arcGenerator({
+  startAngle: 0,
+  endAngle: 0.25 * Math.PI,
+  innerRadius: 50,
+  outerRadius: 100
+});
+
+// kreiranej path elementa i setovanje d atributa
+d3.select('g')
+	.append('path')
+	.attr('d', pathData);
+
+
+  var arcGenerator1 = d3.arc()
+	.innerRadius(20)
+	.outerRadius(100)
+	.padAngle(.02)
+	.padRadius(100)
+	.cornerRadius(4);
+
+var arcData = [
+	{startAngle: 0, endAngle: 0.2},
+	{startAngle: 0.2, endAngle: 0.6},
+	{startAngle: 0.6, endAngle: 1.4},
+	{startAngle: 1.4, endAngle: 3},
+	{startAngle: 3, endAngle: 2* Math.PI}
+];
+
+d3.select('#arc-code')
+	.selectAll('path')
+	.data(arcData)
+	.join('path')
+	.attr('d', arcGenerator1);
+
+

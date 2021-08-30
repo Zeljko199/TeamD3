@@ -11,7 +11,7 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/installation.css">  
+  <link rel="stylesheet" href="css/shapes.css">  
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/footer.css">
 
@@ -47,9 +47,24 @@
             <li class="nav-item underlineEffect">
               <a href="instalation.html" class="nav-link">Instalacija</a>
             </li>
-            <li class="nav-item underlineEffect">
-              <a href="services.html" class="nav-link">Primena</a>
-            </li>
+
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="./shapes.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="true">
+              D3 shapes
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="./line.html">d3.line</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="./area.html">d3.area</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">d3.arc</a></li>
+            </ul>
+          </li>
             <li class="nav-item underlineEffect">
               <a href="team.html" class="nav-link">Galerija</a>
             </li>
@@ -69,45 +84,62 @@
         <div class="container mb-4 py-4">
           <h1 class="ml6 text-center">
             <span class="text-wrapper ">
-              <span class="letters title-main ">INSTALACIJA D3.js</span> 
+              <span class="letters title-main "> SHAPES (d3-shape) </span> 
             </span> <hr>
           </h1> <br>
             
           <p>
-            Kako bismo uključili biblioteku D3.js na HTML web stranicu i koristili D3.js za kreiranje vizualizacije podataka. To možemo učiniti na dva načina
-          </p> <br>
-          <ul>
-            <li>&nbsp&nbsp 1) Uključicvanje biblioteke D3.js iz foldera projekta</li>
-            <li>&nbsp&nbsp 2) Uključivanje biblioteke D3.js iz CDN(Content Delivert Network)</li>
-          </ul> <hr>
+            Vizualizacije se obično sastoje od diskretnih grafičkih oznaka, kao što su simboli, lukovi, linije i oblasti. Iako pravougaonike trakastog grafikona može biti dovoljno lako generisati direktno pomoću SVG -a ili platna, drugi oblici su složeni, poput zaobljenih prstenastih sektora i centripetalnih Catmull -Rom krivina. Ovaj modul nudi razne generatore oblika za vašu udobnost.
+          </p>
+            <br>
+            <p>
+            Kao i drugi aspekti D3, ovi oblici su vođeni podacima: svaki generator oblika otkriva pristupnike koji kontrolišu kako se ulazni podaci mapiraju u vizuelni prikaz. Na primer, možete definisati linijski generator za vremensku seriju skaliranjem polja podataka tako da odgovaraju grafikonu:          </p> <br>
+            </p>
           <br>
-          <div class="">
-            <p>Ako koristite npm, npm instalirajte d3. Takođe možete preuzeti najnovije izdanje na GitHub -u. Za vanilin HTML u savremenim pregledačima, uvezite D3 iz Skipack -a:</p> <br>
-           
+          <div class="">           
             <p class="code p-3" id="code1">
             </p>
 
             <script defer>
-              var codet = " <script type=\"module\"> <br> &nbsp &nbsp import * as d3 from \"https://cdn.skypack.dev/d3@7\"; <br> &nbsp &nbsp const div = d3.selectAll(\"div\"); <br> <\/script>"; 
+              var codet = " const line = d3.line()<br>&nbsp&nbsp&nbsp.x(d => x(d.date))<br>&nbsp&nbsp&nbsp.y(d => y(d.value));"; 
               var text = codet.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
 
               document.getElementById('code1').innerHTML=text;
             </script>
-              <br>
+              <br><hr> <br>
+
+              <h2 class="title-main text-left ">
+               <span>Instalacija</span>
+              </h2> <hr><br> 
+
             <div>
               <p>
-                Takođe možete koristiti samostalne D3 mikro biblioteke. Na primer, d3-izbor: </p> <br>
+                Ako koristite npm, npm instalirajte d3-shape. Takođe možete preuzeti najnovije izdanje na GitHub -u. Za vanilin HTML u savremenim pregledačima, uvezite d3-oblik iz Skipack-a: </p> <br>
               <p class="code p-3" id="code2"></p>
           
               <script defer>
-                var codet2 = " <script type=\"module\">  <br> &nbsp &nbsp import {selectAll} from \"https://cdn.skypack.dev/d3-selection@3\"; const div = selectAll(\"div\");  <br> <\/script>"; 
+                var codet2 = " <script type=\"module\"><br>&nbsp&nbspimport {line} from \"https://cdn.skypack.dev/d3-shape@3\";<br>&nbsp&nbspconst l = line();<br><\/script>"; 
                 var text = codet2.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
   
                 document.getElementById('code2').innerHTML=text;
               </script>
-                <br>
+                <br><hr><br>
+              <div>
+             
+                <h5>D3 nudi funkcije generatora koje rade umesto vas. Oni dolaze u različitim oblicima:</h5> <br>
+                  <ul style="font-size: medium;">
+                    <li>&nbsp &nbsp <b>Line </b>- Generiše podatke o putanji za višesedmentnu liniju (obično za linijske grafove)</li>
+                    <li>&nbsp &nbsp <b>Area</b> - Generiše podatke o putanji za oblast (obično za naslagane linijske grafikone i grafikone protoka)</li>
+                    <li>&nbsp &nbsp <b>Stack</b> - Generiše podatke o steku iz višeserijskih podataka</li>
+                    <li>&nbsp &nbsp <b>Arc</b> - Generiše podatke o putanji za luk (obično za tortne grafikone)</li>
+                    <li>&nbsp &nbsp <b>Pie</b> - Generiše podatke o uglu torte iz niza podataka</li>
+                    <li>&nbsp &nbsp <b>Simbol</b> - Generiše podatke o putanji za simbole kao što su plus, zvezda, dijamant</li>
 
-            <div>
+                  </ul>
+                 
+              </div>
+             
+            <!-- <div>
               <p>D3 je napisan pomoću modula ES2015. Napravite prilagođeni paket koristeći Rollup, Vebpack ili željeni paket. 
                 Da biste uvezli D3 u aplikaciju ES2015, ili uvezite određene simbole iz određenih D3 modula:</p> <br>
               <p class="code" id="code3"> </p>
@@ -137,12 +169,12 @@
   
                 document.getElementById('code5').innerHTML=text;
               </script> <br>
-            </div>
+            </div> -->
             
           </div>
         </div>
    </div>
-</div>
+ </div>
 
 
 

@@ -1,0 +1,32 @@
+path {
+	fill: rgb(224, 186, 160);
+}
+
+.postion-code{
+    justify-content: center;
+}
+
+
+.first {
+	margin-top: 2rem;
+    padding-top: 100px;
+}
+.code {
+	display: flex;
+	background: white;
+	/* background: rgb(255, 190, 147) !important; */
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-left: 3%;
+	border-radius: 10px;
+	width: 90%;
+	border-color: rgb(255, 190, 147) !important;
+	border-style: solid;
+	
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0 !important;
+}

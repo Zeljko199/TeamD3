@@ -11,7 +11,7 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/shapes.css">  
+  <link rel="stylesheet" href="css/area.css">  
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/footer.css">
 
@@ -28,7 +28,11 @@
 
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-  <title>TeamD3</title>
+ <!-- D3.JS v4 -->
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <title>D3.area</title>
+    
+   
 </head>
 
 <header>
@@ -45,16 +49,13 @@
               <a href="index.html" class="nav-link">Početna</a>
             </li>
             <li class="nav-item underlineEffect">
-              <a href="installation.html" class="nav-link">Instalacija</a>
+              <a href="instalation.html" class="nav-link">Instalacija</a>
             </li>
             <li class="nav-item underlineEffect">
-              <a href="#" class="nav-link">D3</a>
-            </li>
-          <li class="nav-item underlineEffect">
-            <a href="shapes.html" class="nav-link">D3 shapes</a>
-          </li>
+                <a href="#" class="nav-link">D3</a>
+              </li>
             <li class="nav-item underlineEffect">
-              <a href="team.html" class="nav-link">Galerija</a>
+              <a href="shapes.html" class="nav-link">D3 shapes</a>
             </li>
             <li class="nav-item underlineEffect">
               <a href="about_us.html" class="nav-link">O autorima</a>
@@ -72,66 +73,70 @@
         <div class="container mb-4 py-4">
           <h1 class="ml6 text-center">
             <span class="text-wrapper ">
-              <span class="letters title-main "> SHAPES (d3-shape) </span> 
+              <span class="letters title-main ">  d3.area  </span> 
             </span> <hr>
           </h1> <br>
             
-          <p>
-            Vizualizacije se obično sastoje od diskretnih grafičkih oznaka, kao što su simboli, lukovi, linije i oblasti. Iako pravougaonike trakastog grafikona može biti dovoljno lako generisati direktno pomoću SVG -a ili platna, drugi oblici su složeni, poput zaobljenih prstenastih sektora i centripetalnih Catmull -Rom krivina. Ovaj modul nudi razne generatore oblika za vašu udobnost.
-          </p>
+
+          <p>Metoda <b>d3.area () </b>u D3.js se koristi za vraćanje generatora područja sa podrazumevanim postavkama koje se dalje mogu koristiti za kreiranje oblasti.</p>
+          <br><p> <b> Sintaksa:</p> </b><br>
+          <div class="">           
+            <p class="code p-3" id="code0"> </p>
+            <script defer>
+              var codet = "d3.area();"; 
+              var text = codet.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
+
+              document.getElementById('code0').innerHTML=text;
+            </script> <br><br>
+             <p>
+                <b>Parametri:</b> Ova metoda ne prihvata parametre.
+                <br><br>
+                <b>Povratna vrednost:</b> Ova metoda ne vraća vrednost.
+            </p><hr><br>
+          <p>Podrazumevano generiše područje između i = 0 i višesegmentne linije definisane nizom tačaka:        </p>
             <br>
-            <p>
-            Kao i drugi aspekti D3, ovi oblici su vođeni podacima: svaki generator oblika otkriva pristupnike koji kontrolišu kako se ulazni podaci mapiraju u vizuelni prikaz. Na primer, možete definisati linijski generator za vremensku seriju skaliranjem polja podataka tako da odgovaraju grafikonu:          </p> <br>
-            </p>
-          <br>
           <div class="">           
             <p class="code p-3" id="code1">
             </p>
-
             <script defer>
-              var codet = " const line = d3.line()<br>&nbsp&nbsp&nbsp.x(d => x(d.date))<br>&nbsp&nbsp&nbsp.y(d => y(d.value));"; 
+              var codet = " var areaGenerator = d3.area(); <br> <br>var points = [<br>&nbsp&nbsp[0, 80],<br>&nbsp&nbsp[100, 100],<br>&nbsp&nbsp[200, 30],[300, 50],<br>&nbsp&nbsp[400, 40],<br>&nbsp&nbsp[500, 80]<br>&nbsp&nbsp]; <br><br>var pathData = areaGenerator(points);"; 
               var text = codet.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
 
               document.getElementById('code1').innerHTML=text;
-            </script>
-              <br><hr> <br>
+            </script> <br><br>
 
-              <h2 class="title-main text-left ">
-               <span>Instalacija</span>
-              </h2> <hr><br> 
+            
+           <div class="area1">
+                <svg width="700" height="100">
+                    <g></g>
+                </svg>
+           </div>   <br>
+            <br>
+            <p>Osnovnu liniju moguće je menjati pomoću <b>.i0 metode </b> kao što možete videti u primeru ispod:</p>
+             <br>
 
             <div>
-              <p>
-                Ako koristite npm, npm instalirajte d3-shape. Takođe možete preuzeti najnovije izdanje na GitHub -u. Za vanilin HTML u savremenim pregledačima, uvezite d3-oblik iz Skipack-a: </p> <br>
+
+            
               <p class="code p-3" id="code2"></p>
-          
               <script defer>
-                var codet2 = " <script type=\"module\"><br>&nbsp&nbspimport {line} from \"https://cdn.skypack.dev/d3-shape@3\";<br>&nbsp&nbspconst l = line();<br><\/script>"; 
+                var codet2 = " areaGenerator.y0(150);"; 
                 var text = codet2.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
   
                 document.getElementById('code2').innerHTML=text;
-              </script>
-                <br><hr><br>
-              <div>
-             
-                <h5>D3 nudi funkcije generatora koje rade umesto vas. Oni dolaze u različitim oblicima:</h5> <br>
-                  <ul style="font-size: medium;">
-                    <li>&nbsp &nbsp <b>Line </b>- Generiše podatke o putanji za višesedmentnu liniju (obično za linijske grafove)</li>
-                    <li>&nbsp &nbsp <b>Area</b> - Generiše podatke o putanji za oblast (obično za naslagane linijske grafikone i grafikone protoka)</li>
-                    <li>&nbsp &nbsp <b>Stack</b> - Generiše podatke o steku iz višeserijskih podataka</li>
-                    <li>&nbsp &nbsp <b>Arc</b> - Generiše podatke o putanji za luk (obično za tortne grafikone)</li>
-                    <li>&nbsp &nbsp <b>Pie</b> - Generiše podatke o uglu torte iz niza podataka</li>
-                    <li>&nbsp &nbsp <b>Simbol</b> - Generiše podatke o putanji za simbole kao što su plus, zvezda, dijamant</li>
-
-                  </ul>
-                 
-              </div>
-             
-            
+              </script><br>
+              
+              <div class="area2">
+                <svg width="700" height="150" id="area2"> </svg>
+           </div>   <br>
+            <br>
+          
+        </div>
           </div>
         </div>
    </div>
  </div>
+
 
 
 
@@ -161,12 +166,10 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-
   <script src="js/script.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
   crossorigin="anonymous"></script>
-
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
   crossorigin="anonymous"></script>

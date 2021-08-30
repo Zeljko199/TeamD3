@@ -1,0 +1,52 @@
+
+.first {
+	margin-top: 2rem;
+    padding-top: 100px;
+}
+.code {
+	display: flex;
+	background: white;
+	/* background: rgb(255, 190, 147) !important; */
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-left: 3%;
+	border-radius: 10px;
+	width: 90%;
+	border-color: rgb(255, 190, 147) !important;
+	border-style: solid;
+	
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0 !important;
+}
+/* cs za naslov */
+.title-main{
+	text-align: center;
+	color: rgb(255, 190, 147);
+	background-color: white;
+	justify-content: center;
+}
+
+.ml6 {
+	position: relative;
+	font-weight: 900;
+	font-size: 3.3em;
+  }
+  
+  .ml6 .text-wrapper {
+	position: relative;
+	display: inline-block;
+	padding-top: 0.2em;
+	padding-right: 0.05em;
+	padding-bottom: 0.1em;
+	overflow: hidden;
+  }
+  
+  .ml6 .letter {
+	display: inline-block;
+	line-height: 1em;
+  }
+

@@ -11,7 +11,7 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/installation.css">  
+  <link rel="stylesheet" href="css/arc.css">  
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/footer.css">
 
@@ -28,7 +28,11 @@
 
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-  <title>TeamD3</title>
+ <!-- D3.JS v4 -->
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <title>D3.arc</title>
+    
+   
 </head>
 
 <header>
@@ -45,21 +49,14 @@
               <a href="index.html" class="nav-link">Početna</a>
             </li>
             <li class="nav-item underlineEffect">
-              <a href="installation.html" class="nav-link">Instalacija</a>
+              <a href="instalation.html" class="nav-link">Instalacija</a>
             </li>
             <li class="nav-item underlineEffect">
-<<<<<<< HEAD
-              <a href="D3.html" class="nav-link">D3</a>
-            </li>
+                <a href="#" class="nav-link">D3</a>
+              </li>
             <li class="nav-item underlineEffect">
-              <a href="team.html" class="nav-link">Galerija</a>
-=======
-              <a href="#" class="D3">D3</a>
->>>>>>> 78deec9b25f62a22ac53d23a455316ff17f04458
+              <a href="shapes.html" class="nav-link">D3 shapes</a>
             </li>
-          <li class="nav-item underlineEffect">
-            <a href="shapes.html" class="nav-link">D3 shapes</a>
-          </li>
             <li class="nav-item underlineEffect">
               <a href="about_us.html" class="nav-link">O autorima</a>
             </li>
@@ -76,80 +73,89 @@
         <div class="container mb-4 py-4">
           <h1 class="ml6 text-center">
             <span class="text-wrapper ">
-              <span class="letters title-main ">INSTALACIJA D3.js</span> 
+              <span class="letters title-main ">  d3.arc  </span> 
             </span> <hr>
           </h1> <br>
             
-          <p>
-            Kako bismo uključili biblioteku D3.js na HTML web stranicu i koristili D3.js za kreiranje vizualizacije podataka. To možemo učiniti na dva načina
-          </p> <br>
-          <ul>
-            <li>&nbsp&nbsp 1) Uključicvanje biblioteke D3.js iz foldera projekta</li>
-            <li>&nbsp&nbsp 2) Uključivanje biblioteke D3.js iz CDN(Content Delivert Network)</li>
-          </ul> <hr>
-          <br>
-          <div class="">
-            <p>Ako koristite npm, npm instalirajte d3. Takođe možete preuzeti najnovije izdanje na GitHub -u. Za vanilin HTML u savremenim pregledačima, uvezite D3 iz Skipack -a:</p> <br>
-           
+
+          <p>Funkcija <b>d3.arc ()</b> koristi se za generisanje generatora luka koji proizvodi kružni grafikon. Zasniva se na razlici između početnog i krajnjeg ugla.
+            <br><br>
+                <div class="gallery responsive">
+                  <a target="_blank" href="img/pie.png">
+                    <img src="img/pie.png" alt="Cinque Terre" width="600" height="400">
+                  </a>
+                  <div class="desc"></div>
+                </div>
+                      
+             <p><br> <b> Sintaksa:</p> </b><br>
+          <div class="">           
+            <p class="code p-3" id="code0"> </p>
+            <script defer>
+              var codet = "d3.arc();"; 
+              var text = codet.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
+
+              document.getElementById('code0').innerHTML=text;
+            </script> <br><br>
+            <p>
+                <b>Parametri:</b> Ova funkcija ne prihvata parametre.
+                <br><br>
+                <b>Povratna vrednost:</b> Ova funkcija vraća funkciju generatora arc.
+            </p><br>
+          <div class="">           
             <p class="code p-3" id="code1">
             </p>
-
             <script defer>
-              var codet = " <script type=\"module\"> <br> &nbsp &nbsp import * as d3 from \"https://cdn.skypack.dev/d3@7\"; <br> &nbsp &nbsp const div = d3.selectAll(\"div\"); <br> <\/script>"; 
+              var codet = "var arcGenerator = d3.arc();"; 
               var text = codet.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
 
               document.getElementById('code1').innerHTML=text;
-            </script>
-              <br>
+            </script> <br><br>
+            <p>Tada se može proslediti objektu koji sadrži svojstva startAngle, endAngle, innerRadius i outerRadius da bi se dobili podaci o putanji:</p>
+             <br>
+
             <div>
-              <p>
-                Takođe možete koristiti samostalne D3 mikro biblioteke. Na primer, d3-izbor: </p> <br>
+
+            
               <p class="code p-3" id="code2"></p>
-          
               <script defer>
-                var codet2 = " <script type=\"module\">  <br> &nbsp &nbsp import {selectAll} from \"https://cdn.skypack.dev/d3-selection@3\"; const div = selectAll(\"div\");  <br> <\/script>"; 
+                var codet2 = "var pathData = arcGenerator({<br>&nbsp&nbspstartAngle: 0,<br>&nbsp&nbspendAngle: 0.25 * Math.PI,<br>&nbsp&nbspinnerRadius: 50,<br>&nbsp&nbspouterRadius: 100<br>});"; 
                 var text = codet2.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
   
                 document.getElementById('code2').innerHTML=text;
-              </script>
-                <br>
-
-            <div>
-              <p>D3 je napisan pomoću modula ES2015. Napravite prilagođeni paket koristeći Rollup, Vebpack ili željeni paket. 
-                Da biste uvezli D3 u aplikaciju ES2015, ili uvezite određene simbole iz određenih D3 modula:</p> <br>
-              <p class="code" id="code3"> </p>
-              <script defer>
-                var codet3 = " &nbsp&nbsp import {scaleLinear} from \"d3-scale\";"; 
-                var text = codet3.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
-  
-                document.getElementById('code3').innerHTML=text;
-              </script>
-                <br>
-              <p>Ili importujte sve u namespace: </p> <br>
-
-              <p class="code" id="code4"> </p>
-              <script defer>
-                var codet4 = " &nbsp&nbsp import * as d3 from \"d3\";"; 
+              </script><br>
+                   <svg width="700" height="110">
+                        <g transform="translate(300, 110)"></g>
+                    </svg> <br>
+              <p style="border-left-style: solid; border-color: rgb(233, 160, 88); height: 45;  "><i> &nbsp &nbsp <b><i>startAngle</i></b> i <b><i>endAngle</i></b> se mere u smeru kazaljke na satu od 12 sati u radijanima.</i></p>
+            <br>
+            <br> <hr> <br>
+              <h3>Konfiguracija </h3><br> <hr> <br>
+               <p>
+                Možete konfigurirati innerRadius, outerRadius, startAngle, endAngle tako da ih ne morate svaki put prosljeđivati:
+                    </p> <br>
+               <p class="code" id="code4"> </p>
+                <script defer>
+                var codet4 = " &nbsp&nbsp arcGenerator<br>&nbsp&nbsp&nbsp&nbsp.innerRadius(20)<br>&nbsp&nbsp&nbsp&nbsp.outerRadius(100);<br><br>pathData = arcGenerator({<br>&nbsp&nbsp&nbsp&nbspstartAngle: 0,<br>&nbsp&nbsp&nbsp&nbspendAngle: 0.25 * Math.PI<br>&nbsp&nbsp});"; 
                 var text = codet4.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
   
                 document.getElementById('code4').innerHTML=text;
-              </script> <br>
-
-              <p>Ili pomoću dinamičkog importovanja:</p> <br>
-
-              <p class="code" id="code5"> </p>
-              <script defer>
-                var codet5 = " &nbsp&nbsp const d3 = await import(\"d3\");"; 
-                var text = codet5.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
-  
-                document.getElementById('code5').innerHTML=text;
-              </script> <br>
-            </div>
-            
+              </script> <br><br>
+                
+               <div>
+                   <svg width="700" height="220" ><g transform="translate(300, 110)" id="arc-code"></g> </svg>
+               </div>
+               <br>
+               <p>
+               Arc padding uzima dva parametra padAngle i padRadius koji, kada se pomnože zajedno, definišu rastojanje između susednih segmenata. Tako je u gore navedenom primeru rastojanje rastojanja 0,02 * 100 = 2. Imajte na umu da se rastojanje izračunava tako da održava (gde je moguće) granice paralelnih segmenata.
+               </p><br>
+               <p><i>Možda ćete se zapitati zašto ne postoji jedan parametar padDistance za definisanje rastojanja rastojanja. Podeljen je na dva parametra tako da generator kolača (vidi kasnije) ne mora da se bavi radijusom.</i></p>
+          
+        </div>
           </div>
         </div>
    </div>
-</div>
+ </div>
+
 
 
 
@@ -179,12 +185,10 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-
   <script src="js/script.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
   crossorigin="anonymous"></script>
-
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
   crossorigin="anonymous"></script>

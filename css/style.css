@@ -157,3 +157,31 @@ img{
     background-color: white;
     border-bottom: 3px solid #69b3a2;
 }
+
+/* cs za naslov */
+.title-main{
+	text-align: center;
+	color: rgb(255, 190, 147);
+	background-color: white;
+	justify-content: center;
+}
+
+.ml6 {
+	position: relative;
+	font-weight: 900;
+	font-size: 3.3em;
+  }
+  
+  .ml6 .text-wrapper {
+	position: relative;
+	display: inline-block;
+	padding-top: 0.2em;
+	padding-right: 0.05em;
+	padding-bottom: 0.1em;
+	overflow: hidden;
+  }
+  
+  .ml6 .letter {
+	display: inline-block;
+	line-height: 1em;
+  }

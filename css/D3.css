@@ -1,0 +1,54 @@
+@import './navbar.css';
+body{
+  background-color: #8c9795;
+}
+.short_hr{
+    width: 245px;
+    height: 1px;
+    border: none;
+    background-color: black
+}
+
+/* ---------- Tabela levo ----------------- */
+#Scroll ul.nav-pills {
+    top: 40%;
+    position: fixed;
+    color: black !important;
+    box-sizing: border-box;
+}
+
+#Scroll .nav-link {
+  color: grey;
+  box-sizing: border-box;
+}
+
+#Scroll .nav-link.active {
+  color: black;
+  border-left: solid;
+  border-color: #69b3a2;
+  background-color: transparent;
+  border-radius: 0px;
+  box-sizing: border-box;
+}
+
+#Scroll .nav-link:hover {
+  color: black;
+}
+
+@media (max-width: 1400px) {
+  #Scroll {
+    display: none;
+  }
+}
+#ul{
+  display: block;
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-bottom: 30px;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 80px;
+}
+#ul li{
+  padding-bottom: 10px;
+}

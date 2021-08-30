@@ -1,0 +1,233 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Zeljko Milovanovic">
+  <meta name="author" content="Jovana Bulatovic">
+  <meta name="description"
+    content="Ovaj sajt je kreiran kao projektni zadatak iz predmeta web tehnologije na Fakultetu tehničkih nauka u Čačku.">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <script src="js/script.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="icon" type="image/png" href="https://d3js.org/favicon.png" sizes="400x400">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" type="text/css" href="inspector.css">
+  <link rel="stylesheet" href="css/D3.css">
+  <title>TeamD3</title>
+</head>
+<!--========= NAVBAR ===========-->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a href="https://d3js.org/" target="_blank"><img id="brand-logo" src="img/d3.png" alt=""></a>
+      <a href="index.html" id="brand" class="navbar-brand ml-3"><b>Data-Driven Documents</b></a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item underlineEffect">
+            <a href="index.html" class="nav-link">Početna</a>
+          </li>
+          <li class="nav-item underlineEffect">
+            <a href="installation.html" class="nav-link">Instalacija</a>
+          </li>
+          <li class="nav-item underlineEffect">
+            <a href="D3.html" class="nav-link">D3</a>
+          </li>
+          <li class="nav-item underlineEffect">
+            <a href="team.html" class="nav-link">Galerija</a>
+          </li>
+          <li class="nav-item underlineEffect">
+            <a href="about_us.html" class="nav-link">O autorima</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<body>
+
+    <div class="masthead" style="padding-top: 150px; padding-bottom: 80px">
+        <div class="textlanding">
+            <h1 class="text-center">Uvod u d3.js</h1>
+            <div class="text-center">
+            <hr class="short_hr" style= " width:20%; margin-left:40% !important;">
+        </div>
+            <br><br>
+            <p style="max-width: 700px; margin: auto">
+              <a href="https://d3js.org">D3.js</a> je JavaScript biblioteka koja se koristi za rukovanje dokumentima na osnovu podataka. Omogućava bilo koju vrstu vizualizacije podataka. Na ovoj stranici ćemo pokušati da vas što bolje upoznamo sa <b>D3.js</b>.</p>
+              <br><br>
+              <div style="max-width: 900px; margin: auto">
+              <p>Naziv D3 potiče od tri slova D <i>(Data-Driven Documents)</i> - <b>Dokumenti vođeni podacima</b>. Ova biblioteka koja se koristi za vizualizaciju JavaScript podataka postala je popularna zbog nekoliko funkcija koje menjaju dosadne i monotone podatke u interaktivne i zabavne:</p>
+              <ul id="ul">
+                <li>d3 je revolucionaran način vizualizacije podataka stvorene za veb povezivanjem podataka sa elementima na objektnom modelu.</li>
+                <li>d3 je moderna biblioteka koja nudi širok spektar unapred definisanih primera</li>
+                <li>d3 ostavlja mnogo prostora za kreativno prilagođavanje, jer se elementi na koje su podaci vezani mogu stilizovati kao bilo koji drugi HTML elementi.</li>
+                <li>d3 podržava interakciju koju pokreću događaji u pregledaču</li>
+              </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+    </div>
+
+<!--========= Tabela levo ===========-->
+<div>
+    <nav class="col-sm-3 col-4" id="Scroll">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#html">HTML</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#css">CSS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#svg">SVG</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#d3">Javascript and d3.js</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#log">Console.log()</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#coord">Coordinate system</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scale">Scale</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#axis">Axis</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#margin">Margin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#data">Data binding</a>
+        </li>
+      </ul>
+    </nav>
+</div>
+
+
+
+
+
+
+
+<!-- ==================== HTML ==================== -->
+
+<section id="html" >
+<div class="container" >
+
+<h1>Šta je <code>HTML</code>?</h1>
+<hr>
+<br>
+<ul style="margin-top: 5px">
+  <li style="display: list-item;"><a href="https://en.wikipedia.org/wiki/HTML">HTML</a> je jezik za označavanje hiperteksta, jezik specijalno namenjen opisu veb stranica. Pomoću njega se jednostavno mogu odvojiti elementi kao što su naslovi, paragrafi, citati i slično. Veb pregledači poput Mozile ili Google Chrome-a čitaju ovu vrstu datoteke i prevode na veb stranicu.</li>
+  <li>U HTML fajlovima pišemo elemente koji sačinjavaju veb stranicu. Na primer, naslov prvog nivoa predstavlja <code>h1</code> tag, paragraf <code>p</code> tag, slika se označava sa <code>img</code> tagom i još mnogi drugi.</li>
+  <li>Bez osnovnog znanja <code>HTML-a</code> nije moguće napraviti bilo šta u d3.js biblioteci. Ostanite sa nama do kraja!</li>
+</ul>
+<br>
+    <code>&rarr; Primer:</code>
+    <div class="row">
+
+    <div  class="col-lg-5 bg-light text-dark" style="padding: 50px" id="tekst2"> </div>
+
+
+    <div class="col-lg-7">
+        <pre class="language-html"><code id="tekst1" contenteditable="true"><xmp><!DOCTYPE html>
+
+<!-- Dodaj Naslov -->
+<h1>Prvi html dokument</h1>
+
+<!-- Dodaj neki tekst -->
+<p>Ovo je prvi tekst</p>
+
+<!-- Dodaj link -->
+<p>Ovo je <a href="https://www.d3-graph-gallery.com">link do d3 galerije</a></p>
+
+</xmp></code></pre>
+      </div>
+
+
+
+    </div>
+    <br><br>
+    <code>&rarr; Try:</code>
+    <ul>
+      <li>Copy and paste the code above in a local file. Call it something like <code>test.html</code>. Open it with a browser. You've created your first website!</li>
+    </ul>
+  </div>
+</section>
+
+
+<script>
+myHtmlParser('tekst1', 'tekst2')
+document.getElementById('tekst1').addEventListener("input", function() {
+  d3.select('#tekst2').html("");
+  myHtmlParser('tekst1', 'tekst2');
+})
+</script>
+
+
+
+
+
+
+  <!--==================== FOOTER ====================-->
+  <footer class="footer">
+    <img src="img/wave2.png" class="footer-img">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 footer-box">
+          <h2>O PROJEKTU</h2>
+          <p>Ovaj sajt je napravljen zbog projektnog zadatka iz predmeta Veb tehnologije na Fakultetu tehničkih nauka u
+            Čačku. U izradi ovog sajta su učestvovali Željko Milovanović i Jovana Bulatović. Tema ovog projektog rada je
+            D3.js.</p>
+        </div>
+        <div class="col-md-6 footer-box">
+          <img src="img/d3.png" class="ml-5">
+        </div>
+      </div>
+    </div>
+
+    <hr>
+<div class="container text-center" id="social-icons">
+    <!-- Ikonice za društvene mreže -->
+      <a href="https://www.facebook.com/DataDrivenDocuments/" target="_blank"><img src="img/facebook-icon.png"></a>
+      <a href="https://www.instagram.com/explore/tags/d3js/" target="_blank"><img src="img/instagram-icon.png"></a>
+      <a href="https://twitter.com/d3js_org" target="_blank"><img src="img/twitter-icon.png"></a>
+      <a href="https://www.youtube.com/watch?v=_8V5o2UHG0E&ab_channel=freeCodeCamp.org" target="_blank"><img src="img/youtube-icon.png"></a>
+  </div>
+
+    <hr>
+    <div class="p-4 text-center text-white" id="prava">
+      <b>© 2021 Sva prava zadržava: TeamD3</b>
+    </div>
+  </footer>
+
+  <!--==================== SCROLL TOP ====================-->
+
+  <script src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -37,6 +37,8 @@ body{
     margin: 0 0 var(--header-height) 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
+    padding: 0;
+    margin: 0;
 }
 
 h1,h2,h3,h4{
@@ -185,3 +187,39 @@ img{
 	display: inline-block;
 	line-height: 1em;
   }
+
+#contact_img {
+    padding-left: 50px;
+    width: 36% !important;
+}
+#main_gallery {
+    padding-top: 100px !important;
+}
+
+  /* RESPONSIVE */
+
+  @media only screen and (max-width: 600px) {
+    #brand {
+        font-size: 12.5pt;
+    }
+    #picture_1 {
+        max-width: 50% !important;
+    }
+    #d3_banner {
+        font-size: 14pt !important;
+    }
+    #odgovor {
+        font-size: 12pt !important;
+    }
+    #picture_div_1{
+      text-align: center !important;
+      margin: 0 auto !important;
+      padding: 0 !important;
+    }
+    #logo {
+        max-width: 50% !important;
+    }
+    .letters, .title-main {
+        font-size: 25.5pt !important;    
+    }
+  } /*media 1*/

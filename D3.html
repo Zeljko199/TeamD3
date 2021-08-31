@@ -11,7 +11,7 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <script src="js/script.js"></script>
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <link rel="icon" type="image/png" href="https://d3js.org/favicon.png" sizes="400x400">
@@ -54,34 +54,41 @@
 
 <body>
 
-    <div class="masthead" style="padding-top: 150px; padding-bottom: 80px">
-        <div class="textlanding">
-            <h1 class="text-center">Uvod u d3.js</h1>
-            <div class="text-center">
-            <hr class="short_hr" style= " width:20%; margin-left:40% !important;">
-        </div>
-            <br><br>
-            <p style="max-width: 700px; margin: auto">
-              <a href="https://d3js.org">D3.js</a> je JavaScript biblioteka koja se koristi za rukovanje dokumentima na osnovu podataka. Omogućava bilo koju vrstu vizualizacije podataka. Na ovoj stranici ćemo pokušati da vas što bolje upoznamo sa <b>D3.js</b>.</p>
-              <br><br>
-              <div style="max-width: 900px; margin: auto">
-              <p>Naziv D3 potiče od tri slova D <i>(Data-Driven Documents)</i> - <b>Dokumenti vođeni podacima</b>. Ova biblioteka koja se koristi za vizualizaciju JavaScript podataka postala je popularna zbog nekoliko funkcija koje menjaju dosadne i monotone podatke u interaktivne i zabavne:</p>
-              <ul id="ul">
-                <li>d3 je revolucionaran način vizualizacije podataka stvorene za veb povezivanjem podataka sa elementima na objektnom modelu.</li>
-                <li>d3 je moderna biblioteka koja nudi širok spektar unapred definisanih primera</li>
-                <li>d3 ostavlja mnogo prostora za kreativno prilagođavanje, jer se elementi na koje su podaci vezani mogu stilizovati kao bilo koji drugi HTML elementi.</li>
-                <li>d3 podržava interakciju koju pokreću događaji u pregledaču</li>
-              </ul>
-            </div>
-        </div>
+  <div class="masthead" style="padding-top: 150px; padding-bottom: 80px">
+    <div class="textlanding">
+      <h1 class="text-center">Uvod u d3.js</h1>
+      <div class="text-center">
+        <hr class="short_hr" style=" width:20%; margin-left:40% !important;">
+      </div>
+      <br><br>
+      <p style="max-width: 700px; margin: auto">
+        <a href="https://d3js.org">D3.js</a> je JavaScript biblioteka koja se koristi za rukovanje dokumentima na osnovu
+        podataka. Omogućava bilo koju vrstu vizualizacije podataka. Na ovoj stranici ćemo pokušati da vas što bolje
+        upoznamo sa <b>D3.js</b>.
+      </p>
+      <br><br>
+      <div style="max-width: 900px; margin: auto">
+        <p>Naziv D3 potiče od tri slova D <i>(Data-Driven Documents)</i> - <b>Dokumenti vođeni podacima</b>. Ova
+          biblioteka koja se koristi za vizualizaciju JavaScript podataka postala je popularna zbog nekoliko funkcija
+          koje menjaju dosadne i monotone podatke u interaktivne i zabavne:</p>
+        <ul id="ul">
+          <li>d3 je revolucionaran način vizualizacije podataka stvorene za veb povezivanjem podataka sa elementima na
+            objektnom modelu.</li>
+          <li>d3 je moderna biblioteka koja nudi širok spektar unapred definisanih primera</li>
+          <li>d3 ostavlja mnogo prostora za kreativno prilagođavanje, jer se elementi na koje su podaci vezani mogu
+            stilizovati kao bilo koji drugi HTML elementi.</li>
+          <li>d3 podržava interakciju koju pokreću događaji u pregledaču</li>
+        </ul>
+      </div>
     </div>
+  </div>
 
-    <div class="container">
+  <div class="container">
 
-    </div>
+  </div>
 
-<!--========= Tabela levo ===========-->
-<div>
+  <!--========= Tabela levo ===========-->
+  <div>
     <nav class="col-sm-3 col-4" id="Scroll">
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">
@@ -116,7 +123,7 @@
         </li>
       </ul>
     </nav>
-</div>
+  </div>
 
 
 
@@ -124,28 +131,34 @@
 
 
 
-<!-- ==================== HTML ==================== -->
+  <!-- ==================== HTML ==================== -->
 
-<section id="html" >
-<div class="container" >
+  <section id="html">
+    <div class="container">
 
-<h1>Šta je <code>HTML</code>?</h1>
-<hr>
-<br>
-<ul style="margin-top: 5px">
-  <li style="display: list-item;"><a href="https://en.wikipedia.org/wiki/HTML">HTML</a> je jezik za označavanje hiperteksta, jezik specijalno namenjen opisu veb stranica. Pomoću njega se jednostavno mogu odvojiti elementi kao što su naslovi, paragrafi, citati i slično. Veb pregledači poput Mozile ili Google Chrome-a čitaju ovu vrstu datoteke i prevode na veb stranicu.</li>
-  <li>U HTML fajlovima pišemo elemente koji sačinjavaju veb stranicu. Na primer, naslov prvog nivoa predstavlja <code>h1</code> tag, paragraf <code>p</code> tag, slika se označava sa <code>img</code> tagom i još mnogi drugi.</li>
-  <li>Bez osnovnog znanja <code>HTML-a</code> nije moguće napraviti bilo šta u d3.js biblioteci. Ostanite sa nama do kraja!</li>
-</ul>
-<br>
-    <code>&rarr; Primer:</code>
-    <div class="row">
+      <h1>Šta je <code>HTML</code>?</h1>
+      <hr>
+      <br>
+      <ul style="margin-top: 5px">
+        <li style="display: list-item;"><a href="https://en.wikipedia.org/wiki/HTML">HTML</a> je jezik za označavanje
+          hiperteksta, jezik specijalno namenjen opisu veb stranica. Pomoću njega se jednostavno mogu odvojiti elementi
+          kao što su naslovi, paragrafi, citati i slično. Veb pregledači poput Mozile ili Google Chrome-a čitaju ovu
+          vrstu datoteke i prevode na veb stranicu.</li>
+        <li>U HTML fajlovima pišemo elemente koji sačinjavaju veb stranicu. Na primer, naslov prvog nivoa predstavlja
+          <code>h1</code> tag, paragraf <code>p</code> tag, slika se označava sa <code>img</code> tagom i još mnogi
+          drugi.</li>
+        <li>Bez osnovnog znanja <code>HTML-a</code> nije moguće napraviti bilo šta u d3.js biblioteci. Ostanite sa nama
+          do kraja!</li>
+      </ul>
+      <br>
+      <code>&rarr; Primer:</code>
+      <div class="row">
 
-    <div  class="col-lg-5 bg-light text-dark" style="padding: 50px" id="tekst2"> </div>
+        <div class="col-lg-5 bg-light text-dark" style="padding: 50px" id="tekst2"> </div>
 
 
-    <div class="col-lg-7">
-        <pre class="language-html"><code id="tekst1" contenteditable="true"><xmp><!DOCTYPE html>
+        <div class="col-lg-7">
+          <pre class="language-html"><code id="tekst1" contenteditable="true"><xmp><!DOCTYPE html>
 
 <!-- Dodaj Naslov -->
 <h1>Prvi html dokument</h1>
@@ -157,29 +170,154 @@
 <p>Ovo je <a href="https://www.d3-graph-gallery.com">link do d3 galerije</a></p>
 
 </xmp></code></pre>
+        </div>
+
+
+
+      </div>
+      <br><br>
+    </div>
+  </section>
+
+
+  <script>
+    myHtmlParser('tekst1', 'tekst2')
+    document.getElementById('tekst1').addEventListener("input", function () {
+      d3.select('#tekst2').html("");
+      myHtmlParser('tekst1', 'tekst2');
+    })
+  </script>
+
+  <!-- ==================== CSS ==================== -->
+
+  <section id="css">
+    <div class="container">
+
+      <h1>Stilizujte dokumenta sa <code>CSS-om</code></h1>
+      <hr>
+      <code>&rarr; Objašnjenje:</code>
+      <br>
+      <ul style="margin-top: 5px">
+        <li><a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a> (<i>Cascading Style Sheet</i>) je
+          jezik koji koristimo za oblikovanje i stilizovanje HTML dokumenata. Omogućava primenu specifičnih stilova.
+        </li>
+        <li>Ne moguće je napraviti d3.js dokument bez osnovnog znanja o css-u. Od pomoći bi mogao da vam bude ovaj <a
+            href="https://www.w3schools.com/css/css_intro.asp">tutorijal</a>.</li>
+      </ul>
+      <br>
+      <code>&rarr; Primer:</code>
+      <div class="row">
+
+        <div class="col-lg-5 bg-light" style="padding: 50px" id="paste-css"> </div>
+
+
+        <div class="col-lg-7">
+          <aside style="position: -webkit-sticky; position: sticky; top: 120px">&larr; Edit me! </aside>
+          <pre class="language-html"><code id="copy-css" contenteditable="true"><xmp><!DOCTYPE html>
+
+<!-- Primenite određeni stil na elemente koji imaju klasu 'inGreen' -->
+<style>
+  .inGreen { color: green; }
+</style>
+
+<!-- Dodajte naslov i u naslovu klasu 'inGreen' -->
+<h1 class="inGreen">Prvi html dokument</h1>
+
+<!-- Dodajte neki tekst -->
+<p>Ovo je moj prvi tekst</p>
+
+<!-- Dodajte neki link -->
+<p>Ovo je <a href="https://www.d3-graph-gallery.com">link do d3 galerije</a></p>
+
+</xmp></code></pre>
+        </div>
+
+
+
+      </div>
+      <br>
+    </div>
+  </section>
+
+
+  <script>
+    // Read the JS fragment at the beginning. Read it again if it changes
+    myHtmlParser('copy-css', 'paste-css')
+    document.getElementById('copy-css').addEventListener("input", function () {
+      d3.select('#paste-css').html("");
+      myHtmlParser('copy-css', 'paste-css');
+    })
+  </script>
+
+<!-- ==================== SVG ==================== -->
+
+<section id="svg">
+  <div class="container" >
+
+    <h1>Napravite oblike pomoću <code>SVG</code></h1>
+    <hr>
+    <code>&rarr; Objašnjenje:</code>
+    <br>
+    <ul style="margin-top: 5px">
+      <li><a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a> - označava skabilnu vektorsku grafiku. It is a vector image format. Basically, it is a language that allows to build shapes with code.</li>
+      <li>A d3.js chart is actually a set of <code>svg</code> shapes put together. For instant, a scatterplot is just composed by several circles as the one shown below.</li>
+      <li>This <a href="graph/shape.html">document</a> of the d3 graph gallery showcases the different shapes offered by Svg.</li>
+    </ul>
+    <br>
+    <code>&rarr; Example:</code>
+    <div class="row">
+
+    <div  class="col-lg-5 bg-light" style="padding: 50px" id="res-svg"> </div>
+
+
+    <div class="col-lg-7">
+        <aside style="position: -webkit-sticky; position: sticky; top: 120px">&larr; Edit me! </aside>
+        <pre class="language-html"><code id="code-svg" contenteditable="true"><xmp><!DOCTYPE html>
+<!-- Add a title -->
+<h1>First html document</h1>
+
+<!-- Add a bit of text -->
+<p>This is my first sentence</p>
+
+<!-- Add a svg shape -->
+<svg>
+  <circle style="fill: #69b3a2" stroke="black" cx=50 cy=50 r=40></circle>
+</svg>
+
+</xmp></code></pre>
       </div>
 
 
 
-    </div>
-    <br><br>
-    <code>&rarr; Try:</code>
-    <ul>
-      <li>Copy and paste the code above in a local file. Call it something like <code>test.html</code>. Open it with a browser. You've created your first website!</li>
-    </ul>
-  </div>
+</div>
+<br>
+<code>&rarr; Try:</code>
+<br>
+<ul style="margin-top: 5px">
+  <li>Modify the arguments of in the <code>svg</code> call to understand what feature they control.</li>
+  <li>Try to draw another type of shape using the cheat sheet below</li>
+</ul>
+<pre class="language-html"><code><xmp><line x1="0" y1="0" x2="10" y2="10" stroke="black"></line>
+<rect x="0" y="0" width="10" height="10"></rect>
+<circle cx="5" cy="5" r="5"></circle>
+<ellipse cx="10" cy="5" rx="10" ry="5"></ellipse>
+<polygon points="0,0 10,5 20,0 20,20 10,15 0,20"></polygon>
+<polyline points="0,0 10,5 20,0 20,20 10,15 0,20" stroke="black"></polyline>
+<path d="M65,10 a50,25 0 1,0 50,25"></path>
+</xmp></code></pre>
+<p style="text-align: right"><a style="font-size: 9px" href="https://codepen.io/chriscoyier/pen/dXKxvv">Example source</a></p>
+</div>
 </section>
 
 
 <script>
-myHtmlParser('tekst1', 'tekst2')
-document.getElementById('tekst1').addEventListener("input", function() {
-  d3.select('#tekst2').html("");
-  myHtmlParser('tekst1', 'tekst2');
+// Read the JS fragment at the beginning. Read it again if it changes
+myHtmlParser('code-svg', 'res-svg')
+document.getElementById('code-svg').addEventListener("input", function() {
+  d3.select('#res-svg').html("");
+  myHtmlParser('code-svg', 'res-svg');
 })
 </script>
-
-
 
 
 
@@ -202,13 +340,14 @@ document.getElementById('tekst1').addEventListener("input", function() {
     </div>
 
     <hr>
-<div class="container text-center" id="social-icons">
-    <!-- Ikonice za društvene mreže -->
+    <div class="container text-center" id="social-icons">
+      <!-- Ikonice za društvene mreže -->
       <a href="https://www.facebook.com/DataDrivenDocuments/" target="_blank"><img src="img/facebook-icon.png"></a>
       <a href="https://www.instagram.com/explore/tags/d3js/" target="_blank"><img src="img/instagram-icon.png"></a>
       <a href="https://twitter.com/d3js_org" target="_blank"><img src="img/twitter-icon.png"></a>
-      <a href="https://www.youtube.com/watch?v=_8V5o2UHG0E&ab_channel=freeCodeCamp.org" target="_blank"><img src="img/youtube-icon.png"></a>
-  </div>
+      <a href="https://www.youtube.com/watch?v=_8V5o2UHG0E&ab_channel=freeCodeCamp.org" target="_blank"><img
+          src="img/youtube-icon.png"></a>
+    </div>
 
     <hr>
     <div class="p-4 text-center text-white" id="prava">

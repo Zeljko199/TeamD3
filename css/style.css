@@ -223,3 +223,49 @@ img{
         font-size: 25.5pt !important;    
     }
   } /*media 1*/
+
+
+  /*SLIKA ZA LINE AREA I ARC*/
+  .pie-img{
+    width: 50 !important; 
+    height: 100px !important;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+    justify-items: center;
+}
+  
+div.gallery:hover {
+    border: 1px solid #777;
+}
+  
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+  
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+  .responsive {
+    padding: 0 6px;
+    float: center;
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  

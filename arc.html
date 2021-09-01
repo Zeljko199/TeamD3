@@ -103,7 +103,7 @@
             <br><br>
                 <div class="gallery responsive">
                   <a target="_blank" href="img/pie.png">
-                    <img src="img/pie.png" alt="Cinque Terre" width="600" height="400">
+                    <img src="img/pie.png" alt="Arc" width="600" height="400">
                   </a>
                   <div class="desc"></div>
                 </div>
@@ -152,11 +152,11 @@
             <br> <hr> <br>
               <h3>Konfiguracija </h3><br> <hr> <br>
                <p>
-                Možete konfigurirati innerRadius, outerRadius, startAngle, endAngle tako da ih ne morate svaki put prosljeđivati:
+                Možete konfigurirati innerRadius, outerRadius, startAngle, endAngle tako da ih ne morate svaki put prosleđivati:
                     </p> <br>
                <p class="code" id="code4"> </p>
                 <script defer>
-                var codet4 = " &nbsp&nbsp arcGenerator<br>&nbsp&nbsp&nbsp&nbsp.innerRadius(20)<br>&nbsp&nbsp&nbsp&nbsp.outerRadius(100);<br><br>pathData = arcGenerator({<br>&nbsp&nbsp&nbsp&nbspstartAngle: 0,<br>&nbsp&nbsp&nbsp&nbspendAngle: 0.25 * Math.PI<br>&nbsp&nbsp});"; 
+                var codet4 = " &nbsp&nbsp arcGenerator<br>&nbsp&nbsp&nbsp&nbsp.innerRadius(20)<br>&nbsp&nbsp&nbsp&nbsp.outerRadius(100);<br><br>&nbsp&nbsppathData = arcGenerator({<br>&nbsp&nbsp&nbsp&nbspstartAngle: 0,<br>&nbsp&nbsp&nbsp&nbspendAngle: 0.25 * Math.PI<br>&nbsp&nbsp});"; 
                 var text = codet4.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
   
                 document.getElementById('code4').innerHTML=text;
@@ -169,7 +169,6 @@
                <p>
                Arc padding uzima dva parametra padAngle i padRadius koji, kada se pomnože zajedno, definišu rastojanje između susednih segmenata. Tako je u gore navedenom primeru rastojanje rastojanja 0,02 * 100 = 2. Imajte na umu da se rastojanje izračunava tako da održava (gde je moguće) granice paralelnih segmenata.
                </p><br>
-               <p><i>Možda ćete se zapitati zašto ne postoji jedan parametar padDistance za definisanje rastojanja rastojanja. Podeljen je na dva parametra tako da generator kolača (vidi kasnije) ne mora da se bavi radijusom.</i></p>
           
         </div>
           </div>

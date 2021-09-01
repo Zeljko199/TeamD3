@@ -56,7 +56,7 @@ img{
     max-width: 100%;
     height: auto;
 }
-/*==================== REUSABLE CSS CLASSES ====================*/
+
 .section_title{
     font-size: var(--h1-font-size);
     text-align: center;
@@ -125,24 +125,6 @@ img{
     margin-top: 100px;
 }
 
-/*========== SCROLL UP ==========*/
-
-
-/* Show scroll */
-
-
-/*========== SCROLL BAR ==========*/
-
-
-/*==================== MEDIA QUERIES ====================*/
-/* For small devices */
-
-
-/* For medium devices */
-
-
-/* For large devices */
-
 #brand-logo {
     width: 3rem;
     height: 3rem;
@@ -192,9 +174,7 @@ img{
     margin-left: 70px;
     width: 28% !important;
 }
-#main_gallery {
-    padding-top: 100px !important;
-}
+
 
   /* RESPONSIVE */
 
@@ -223,3 +203,13 @@ img{
         font-size: 25.5pt !important;    
     }
   } /*media 1*/
+
+
+/*  GALERIJA    */
+  .jumbotron{
+    border-radius: 5%;
+  }
+
+  #galerija{
+    margin-top: 80px;
+  }

@@ -18,6 +18,11 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <link rel="stylesheet" type="text/css" href="inspector.css">
   <link rel="stylesheet" href="css/D3.css">
+  <!-- HTML TO CANVAS -->
+  <script src="js/html2canvas.js"></script>
+
+  <!-- Function to parse html and js code chunks made by Yan Holtz -->
+  <script src="js/myParser.js"></script>
   <title>TeamD3</title>
 </head>
 <!--========= NAVBAR ===========-->
@@ -146,47 +151,14 @@
           vrstu datoteke i prevode na veb stranicu.</li>
         <li>U HTML fajlovima pišemo elemente koji sačinjavaju veb stranicu. Na primer, naslov prvog nivoa predstavlja
           <code>h1</code> tag, paragraf <code>p</code> tag, slika se označava sa <code>img</code> tagom i još mnogi
-          drugi.</li>
+          drugi.
+        </li>
         <li>Bez osnovnog znanja <code>HTML-a</code> nije moguće napraviti bilo šta u d3.js biblioteci. Ostanite sa nama
           do kraja!</li>
       </ul>
       <br>
-      <code>&rarr; Primer:</code>
-      <div class="row">
-
-        <div class="col-lg-5 bg-light text-dark" style="padding: 50px" id="tekst2"> </div>
-
-
-        <div class="col-lg-7">
-          <pre class="language-html"><code id="tekst1" contenteditable="true"><xmp><!DOCTYPE html>
-
-<!-- Dodaj Naslov -->
-<h1>Prvi html dokument</h1>
-
-<!-- Dodaj neki tekst -->
-<p>Ovo je prvi tekst</p>
-
-<!-- Dodaj link -->
-<p>Ovo je <a href="https://www.d3-graph-gallery.com">link do d3 galerije</a></p>
-
-</xmp></code></pre>
-        </div>
-
-
-
-      </div>
-      <br><br>
     </div>
   </section>
-
-
-  <script>
-    myHtmlParser('tekst1', 'tekst2')
-    document.getElementById('tekst1').addEventListener("input", function () {
-      d3.select('#tekst2').html("");
-      myHtmlParser('tekst1', 'tekst2');
-    })
-  </script>
 
   <!-- ==================== CSS ==================== -->
 
@@ -205,121 +177,366 @@
             href="https://www.w3schools.com/css/css_intro.asp">tutorijal</a>.</li>
       </ul>
       <br>
-      <code>&rarr; Primer:</code>
-      <div class="row">
-
-        <div class="col-lg-5 bg-light" style="padding: 50px" id="paste-css"> </div>
-
-
-        <div class="col-lg-7">
-          <aside style="position: -webkit-sticky; position: sticky; top: 120px">&larr; Edit me! </aside>
-          <pre class="language-html"><code id="copy-css" contenteditable="true"><xmp><!DOCTYPE html>
-
-<!-- Primenite određeni stil na elemente koji imaju klasu 'inGreen' -->
-<style>
-  .inGreen { color: green; }
-</style>
-
-<!-- Dodajte naslov i u naslovu klasu 'inGreen' -->
-<h1 class="inGreen">Prvi html dokument</h1>
-
-<!-- Dodajte neki tekst -->
-<p>Ovo je moj prvi tekst</p>
-
-<!-- Dodajte neki link -->
-<p>Ovo je <a href="https://www.d3-graph-gallery.com">link do d3 galerije</a></p>
-
-</xmp></code></pre>
-        </div>
-
-
-
-      </div>
       <br>
     </div>
   </section>
 
 
-  <script>
-    // Read the JS fragment at the beginning. Read it again if it changes
-    myHtmlParser('copy-css', 'paste-css')
-    document.getElementById('copy-css').addEventListener("input", function () {
-      d3.select('#paste-css').html("");
-      myHtmlParser('copy-css', 'paste-css');
-    })
-  </script>
+  <!-- ==================== SVG ==================== -->
 
-<!-- ==================== SVG ==================== -->
+  <section id="svg">
+    <div class="container">
 
-<section id="svg">
-  <div class="container" >
+      <h1>Napravite oblike pomoću <code>SVG</code></h1>
+      <hr>
+      <code>&rarr; Objašnjenje:</code>
+      <br>
+      <ul style="margin-top: 5px">
+        <li><a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a> - označava skabilnu vektorsku
+          grafiku. To je format vektorske slike. U osnovi to je jezik koji omogućava stvaranje oblika pomoću koda.</li>
+        <li>
+          <h5 class="pt-2">Šta je SVG?</h5>
+          <ul>
+            <li>SVG označava skabilnu vektorsku grafiku</li>
+            <li>SVG se koristi za definisanje vektorske grafike na Vebu</li>
+            <li>Svaki element i svaki atribut u SVG fajlovima se može animirati</li>
+            <li>SVG slike se mogu pretraživati, indeksirati i skriptovati</li>
+            <li>SVG grafika ne gubi kvalitet ako je zumirana ili promenjena veličina</li>
+          </ul>
+        </li>
+        <li>D3.js grafikon je zapravo skup SVG oblika.</li>
+      </ul>
+      <br>
+    </div>
+  </section>
 
-    <h1>Napravite oblike pomoću <code>SVG</code></h1>
+  <!-- ==================== JAVASSCRIPT AND D3 ==================== -->
+
+  <section id="d3" class="bg">
+    <div class="container">
+      <h1>Izmenite elemente pomoću JavaScript i D3.js</h1>
+      <hr>
+      <code>&rarr; Objašnjenje:</code>
+      <br>
+      <ul style="margin-top: 5px">
+        <li><a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> je jedan od tri osnovne tehnologije WWW-a.
+          Omogućava interakciju našeg Veb sajta.</li>
+        <li>D3.js je JavaScript biblioteka posebno korisna za vizualizaciju podataka. Omogućava kreiranje, odabir i
+          izmenu elemenata.</li>
+      </ul>
+      <br>
+    </div>
+  </section>
+
+  <!-- ==================== Koordinatni sistem ==================== -->
+
+  <section id="coord" class="bg">
+    <div class="container">
+      <h1>Koordinatni sistem</h1>
+      <hr>
+      <code>&rarr; Objašnjenje:</code>
+      <br>
+      <ul style="margin-top: 5px">
+        <li>Izgradnja D3.js grafikona počinje stvaranjem SVG elemenata.</li>
+        <li>Bitno je napomenuti da:
+          <ul>
+            <li>gornji levi ugao ima koordinate x=0 i y=0;</li>
+            <li>donji levi ugao ima koordinate x=0 i y=<b>height</b>;</li>
+            <li>gornji desni ugao ima koordinate x=<b>width</b> i y=0.</li>
+          </ul>
+        </li>
+      </ul>
+      <br>
+      <code>&rarr; primer:</code>
+      <br>
+      <div class="row">
+
+        <!-- ==================== Slika koordinatnog sistema ==================== -->
+        <div class="col-lg-5 .align-middle">
+          <img src="img/koordinatniSistem.jpg" alt="">
+        </div>
+
+
+
+        <!-- ==================== CODE SECTION = WHERE THE CODE APPEARS ==================== -->
+        <div class="col-lg-7 .align-middle">
+
+
+          <aside style="position: -webkit-sticky; position: sticky; top: 120px"></aside>
+          <pre class="language-html"><code id="html-coord" contenteditable="true"><xmp><!DOCTYPE html>
+  
+  <!-- Dodavanje SVG-a -->
+  <svg id="dataviz_area" height=200 width=450></svg>
+  
+  <!-- Učitavanje d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+  
+  </xmp></code></pre>
+
+
+
+          <!-- ========= kod JS ==============  -->
+          <pre class="language-js"><code id="js-coord" contenteditable="true"><xmp><script>
+            var svg = d3.select("#dataviz_area")
+            svg.append("circle")
+              .attr("cx", 2).attr("cy", 2).attr("r", 40).style("fill", "blue");
+            svg.append("circle")
+              .attr("cx", 140).attr("cy", 70).attr("r", 40).style("fill", "red");
+            svg.append("circle")
+              .attr("cx", 300).attr("cy", 100).attr("r", 40).style("fill", "green");
+          </script></xmp></code></pre>
+        </div>
+  </section>
+
+
+  <!-- ==================== Scale ==================== -->
+
+  <section id="scale" class="bg">
+    <div class="container">
+      <h1>Od podataka do piksela: Scale</h1>
+      <hr>
+      <code>&rarr; Objašnjenje:</code>
+      <br>
+      <ul style="margin-top: 5px">
+        <li>Pozicija elemenata je podešena da bude u pikselima.</li>
+        <li>Zbog toga nam je potrebna funkcija koja numeričku promenljivu prevodi u piksele na određenoj poziciji. Ta
+          funkcija se zove <b>scale</b></li>
+        <li>Ako imamo podatke u procentima i određena SVG površina je širine 400px. 0% -> 0 px. 100% -> 400 px. 50% ->
+          200px.</li>
+        <li>Ako izvršite liniju koda x(10), d3 će vratiti vrednost u pikselima.</li>
+      </ul>
+      <br>
+      <div class="row">
+
+        <!-- ==================== GRAPH SECTION = WHERE THE GRAPH APPEARS ==================== -->
+        <div class="col-lg-5 .align-middle">
+          <img src="img/scale.jpg" alt="">
+        </div>
+
+        <!-- ========= show html code ============== -->
+        <div class="col-lg-7">
+          <aside style="position: -webkit-sticky; position: sticky; top: 120px"></aside>
+          <pre class="language-html"><code id="html-scale" contenteditable="true"><xmp><!DOCTYPE html>
+      
+      <!-- Dodavanje SVG-a -->
+      <svg id="viz_area" height=200 width=450></svg>
+      
+      <!-- Učitavanje d3.js -->
+      <script src="https://d3js.org/d3.v4.js"></script>
+      
+      </xmp></code></pre>
+
+
+
+          <!-- ========= JS kod ==============  -->
+          <pre class="language-js"><code id="js-scale" contenteditable="true"><xmp><script>
+            // Select the svg area
+            var svg = d3.select("#viz_area")
+
+            // Create a scale: transform value in pixel
+            var x = d3.scaleLinear()
+              .domain([0, 100])         // This is the min and the max of the data: 0 to 100 if percentages
+              .range([0, 400]);       // This is the corresponding value I want in Pixel
+            // Try console.log( x(25) ) to see what this x function does.
+
+            // Add 3 dots for 0, 50 and 100%
+            svg.append("circle")
+              .attr("cx", x(10)).attr("cy", 100).attr("r", 40).style("fill", "blue");
+            svg.append("circle")
+              .attr("cx", x(50)).attr("cy", 100).attr("r", 40).style("fill", "red");
+            svg.append("circle")
+              .attr("cx", x(100)).attr("cy", 100).attr("r", 40).style("fill", "green");
+          </script></xmp></code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== Ose ==================== -->
+
+  <section id="axis" class="bg">
+    <div class="container">
+      <h1>Dodavanje ose</h1>
+      <hr>
+      <code>&rarr; Objašnjenje:</code>
+      <ul style="margin-top: 5px">
+        <li>D3 nudi nekoliko funkcija za automatsko crtanje <b>ose</b></li>
+        <li>Ove ose su uvek nacrtane na vrhu <b>scale</b>. Ova skala određuje gde se osa mora postaviti i koji opseg
+          treba da obuhvati.</li>
+        <li>Funkcija <b>axisBottom()</b> pravi horizontalnu osu, sa svim oznakama. <b>axisLeft()</b> se koristi za Y
+          osu.</li>
+      </ul>
+      <br>
+    </div>
+  </section>
+
+  <!-- ==================== MARGIN ==================== -->
+
+  <section id="margin" class="bg">
+    <div class="container">
+      <h1>Margin & translation</h1>
+      <hr>
+      <code>&rarr; Objašnjenje:</code>
+      <ul style="margin-top: 5px">
+        <li>Položaj ose često treba prilagoditi. Na primer, X osa se obično postavlja pri samom dnu grafikona.</li>
+        <li>To je omogućeno zahvaljujući "translation-u". U osnovi, primena <b>.attr("transform",
+            "translate(20,50)")</b> - 20px desno i 50px - pri dnu.</li>
+        <li>Vrlo česta strategija je da se translation primeni u SVG oblasti, stvarajući margine oko grafikona. Ovo je
+          zaista važno razumeti jer skoro svi d3.js grafikoni tako započinju.</li>
+      </ul>
+      <br>
+      <div class="row">
+        <div class="col-lg-5 .align-middle">
+          <img src="img/translation.jpg" alt="">
+        </div>
+        <div class="col-lg-7 .align-middle">
+
+          <!-- ========= prikaz html code ============== -->
+          <aside style="position: -webkit-sticky; position: sticky; top: 120px"></aside>
+          <pre class="language-html"><code id="html-margin" contenteditable="true"><xmp><!DOCTYPE html>
+      
+      <!-- Dodavanje SVG -->
+      <div id="Area"></div>
+      
+      <!-- Učitavanje d3.js -->
+      <script src="https://d3js.org/d3.v4.js"></script>
+      
+      </xmp></code></pre>
+
+          <!-- ========= show JS code ==============  -->
+          <pre class="language-js"><code id="js-margin" contenteditable="true"><xmp><script>
+
+            // set the dimensions and margins of the graph
+            var margin = { top: 10, right: 40, bottom: 30, left: 30 },
+              width = 450 - margin.left - margin.right,
+              height = 400 - margin.top - margin.bottom;
+
+            // append the svg object to the body of the page
+            var sVg = d3.select("#Area")
+              .append("svg")
+              .attr("width", width + margin.left + margin.right)
+              .attr("height", height + margin.top + margin.bottom)
+              // translate this svg element to leave some margin.
+              .append("g")
+              .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+            // X scale and Axis
+            var x = d3.scaleLinear()
+              .domain([0, 100])         // This is the min and the max of the data: 0 to 100 if percentages
+              .range([0, width]);       // This is the corresponding value I want in Pixel
+            sVg
+              .append('g')
+              .attr("transform", "translate(0," + height + ")")
+              .call(d3.axisBottom(x));
+
+            // X scale and Axis
+            var y = d3.scaleLinear()
+              .domain([0, 100])         // This is the min and the max of the data: 0 to 100 if percentages
+              .range([height, 0]);       // This is the corresponding value I want in Pixel
+            sVg
+              .append('g')
+              .call(d3.axisLeft(y));
+
+          </script></xmp></code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== Vezivanje podataka ==================== -->
+
+<section id="data" class="bg">
+  <div class="container">
+    <h1>Vezivanje podataka</h1>
     <hr>
     <code>&rarr; Objašnjenje:</code>
-    <br>
     <ul style="margin-top: 5px">
-      <li><a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a> - označava skabilnu vektorsku grafiku. It is a vector image format. Basically, it is a language that allows to build shapes with code.</li>
-      <li>A d3.js chart is actually a set of <code>svg</code> shapes put together. For instant, a scatterplot is just composed by several circles as the one shown below.</li>
-      <li>This <a href="graph/shape.html">document</a> of the d3 graph gallery showcases the different shapes offered by Svg.</li>
+      <li><u>Vezivanje podataka</u> za SVG elemente je poslednji korak koji nam je potreban da bismo razumeli sve ovo dosadašnje. Ovo je možda i najteži deo za razumevanje.</li>
+      <li>Možete pratiti sledeće korake:</li>
+      <ul>
+        <li><b>SVG</b>: oblast gde se grafikon nalazi</li>
+        <li><b>.selectAll("whatever")</b>: izaberite sve elemente koji još nisu napravljeni</li>
+        <li><b>.data(data)</b>: navedite podatke koje ćete koristiti</li>
+        <li><b>.enter()</b>: pokreće petlju za podatke</li>
+        <li><b>.append("circle")</b>: za svaku iterakciju dodajte krug</li>
+        <li><b>.attr("cx", function(d){ return x(d.x) })</b>: daje X položaj kruga. <b>d</b> će biti <b>data[0]</b>. <b>x(d.x)</b> je odgovarajuća pozicija u pikselima pronađena zahvaljujući <b>x scale</b>.</li>
+      </ul>
     </ul>
     <br>
-    <code>&rarr; Example:</code>
+    <code>&rarr; Primer:</code>
     <div class="row">
-
-    <div  class="col-lg-5 bg-light" style="padding: 50px" id="res-svg"> </div>
-
-
-    <div class="col-lg-7">
-        <aside style="position: -webkit-sticky; position: sticky; top: 120px">&larr; Edit me! </aside>
-        <pre class="language-html"><code id="code-svg" contenteditable="true"><xmp><!DOCTYPE html>
-<!-- Add a title -->
-<h1>First html document</h1>
-
-<!-- Add a bit of text -->
-<p>This is my first sentence</p>
-
-<!-- Add a svg shape -->
-<svg>
-  <circle style="fill: #69b3a2" stroke="black" cx=50 cy=50 r=40></circle>
-</svg>
-
-</xmp></code></pre>
-      </div>
-
-
-
-</div>
-<br>
-<code>&rarr; Try:</code>
-<br>
-<ul style="margin-top: 5px">
-  <li>Modify the arguments of in the <code>svg</code> call to understand what feature they control.</li>
-  <li>Try to draw another type of shape using the cheat sheet below</li>
-</ul>
-<pre class="language-html"><code><xmp><line x1="0" y1="0" x2="10" y2="10" stroke="black"></line>
-<rect x="0" y="0" width="10" height="10"></rect>
-<circle cx="5" cy="5" r="5"></circle>
-<ellipse cx="10" cy="5" rx="10" ry="5"></ellipse>
-<polygon points="0,0 10,5 20,0 20,20 10,15 0,20"></polygon>
-<polyline points="0,0 10,5 20,0 20,20 10,15 0,20" stroke="black"></polyline>
-<path d="M65,10 a50,25 0 1,0 50,25"></path>
-</xmp></code></pre>
-<p style="text-align: right"><a style="font-size: 9px" href="https://codepen.io/chriscoyier/pen/dXKxvv">Example source</a></p>
-</div>
+  
+    <div class="col-lg-5 .align-middle">
+      <img src="img/podaciVezivanja.jpg" alt="">
+    </div>
+  
+  <div class="col-lg-7 .align-middle">
+  
+  <!-- ========= show html code ============== -->
+  <aside style="position: -webkit-sticky; position: sticky; top: 120px"></aside>
+  <pre class="language-html"><code id="html-data" contenteditable="true"><xmp><!DOCTYPE html>
+  
+  <!-- Dodavanje SVG -->
+  <div id="scatter_area"></div>
+  
+  <!-- Učitavanje d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+  
+  </xmp></code></pre>
+  
+  <!-- ========= JS kod ==============  -->
+  <pre class="language-js"><code id="js-data" contenteditable="true"><xmp><script>
+  
+  // set the dimensions and margins of the graph
+  var margin = {top: 10, right: 40, bottom: 30, left: 30},
+      width = 450 - margin.left - margin.right,
+      height = 400 - margin.top - margin.bottom;
+  
+  // append the svg object to the body of the page
+  var svG = d3.select("#scatter_area")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+  
+  // Create data
+  var data = [ {x:10, y:20}, {x:40, y:90}, {x:80, y:50} ]
+  
+  // X scale and Axis
+  var x = d3.scaleLinear()
+      .domain([0, 100])         // This is the min and the max of the data: 0 to 100 if percentages
+      .range([0, width]);       // This is the corresponding value I want in Pixel
+  svG
+    .append('g')
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x));
+  
+  // X scale and Axis
+  var y = d3.scaleLinear()
+      .domain([0, 100])         // This is the min and the max of the data: 0 to 100 if percentages
+      .range([height, 0]);       // This is the corresponding value I want in Pixel
+  svG
+    .append('g')
+    .call(d3.axisLeft(y));
+  
+  // Add 3 dots for 0, 50 and 100%
+  svG
+    .selectAll("whatever")
+    .data(data)
+    .enter()
+    .append("circle")
+      .attr("cx", function(d){ return x(d.x) })
+      .attr("cy", function(d){ return y(d.y) })
+      .attr("r", 7)
+  
+  
+  </script></xmp></code></pre>
+  </div>
+    </div>
+  </div>
 </section>
-
-
-<script>
-// Read the JS fragment at the beginning. Read it again if it changes
-myHtmlParser('code-svg', 'res-svg')
-document.getElementById('code-svg').addEventListener("input", function() {
-  d3.select('#res-svg').html("");
-  myHtmlParser('code-svg', 'res-svg');
-})
-</script>
-
-
 
 
   <!--==================== FOOTER ====================-->

@@ -1,6 +1,6 @@
 @import './navbar.css';
 body{
-  background-color: #8c9795;
+  background-color: #ffffff;
 }
 .short_hr{
     width: 245px;
@@ -40,7 +40,7 @@ body{
     display: none;
   }
 }
-#ul{
+ul{
   display: block;
   list-style-type: disc;
   margin-top: 1em;

@@ -1,6 +1,7 @@
 @import './navbar.css';
 body{
   background-color: #ffffff;
+  margin: 0 !important;
 }
 .short_hr{
     width: 245px;

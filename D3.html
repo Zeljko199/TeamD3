@@ -18,11 +18,6 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <link rel="stylesheet" type="text/css" href="inspector.css">
   <link rel="stylesheet" href="css/D3.css">
-  <!-- HTML TO CANVAS -->
-  <script src="js/html2canvas.js"></script>
-
-  <!-- Function to parse html and js code chunks made by Yan Holtz -->
-  <script src="js/myParser.js"></script>
   <title>TeamD3</title>
 </head>
 <!--========= NAVBAR ===========-->
@@ -31,8 +26,10 @@
     <div class="container">
       <a href="https://d3js.org/" target="_blank"><img id="brand-logo" src="img/d3.png" alt=""></a>
       <a href="index.html" id="brand" class="navbar-brand ml-3"><b>Data-Driven Documents</b></a>
+
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
+        
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
@@ -40,14 +37,31 @@
             <a href="index.html" class="nav-link">Početna</a>
           </li>
           <li class="nav-item underlineEffect">
+            <a href="D3.html" class="nav-link">D3</a>
+          </li>
+        
+          <li class="nav-item underlineEffect">
             <a href="installation.html" class="nav-link">Instalacija</a>
           </li>
           <li class="nav-item underlineEffect">
-            <a href="D3.html" class="nav-link">D3</a>
+           <!-- D3 -->
+            <div class="dropdown show">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Shapes
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <!-- <a class="dropdown-item" href="D3.html">D3</a> -->
+                <a class="dropdown-item" href="shapes.html">- Shapes</a>
+                <a class="dropdown-item" href="line.html">- Line</a>
+                <a class="dropdown-item" href="arc.html">- Arc</a>
+                <a class="dropdown-item" href="area.html">-Area</a>
+              </div>
+            </div>
           </li>
           <li class="nav-item underlineEffect">
-            <a href="team.html" class="nav-link">Galerija</a>
+            <a href="galerija.html" class="nav-link">Galerija</a>
           </li>
+         
           <li class="nav-item underlineEffect">
             <a href="about_us.html" class="nav-link">O autorima</a>
           </li>
@@ -57,7 +71,7 @@
   </nav>
 </header>
 
-<body>
+<body id="d3Body">
 
   <div class="masthead" style="padding-top: 150px; padding-bottom: 80px">
     <div class="textlanding">
@@ -97,7 +111,7 @@
     <nav class="col-sm-3 col-4" id="Scroll">
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">
-          <a class="nav-link active" href="#html">HTML</a>
+          <a class="nav-link" href="#html">HTML</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#css">CSS</a>
@@ -107,9 +121,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#d3">Javascript and d3.js</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#log">Console.log()</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#coord">Coordinate system</a>
@@ -156,6 +167,7 @@
         <li>Bez osnovnog znanja <code>HTML-a</code> nije moguće napraviti bilo šta u d3.js biblioteci. Ostanite sa nama
           do kraja!</li>
       </ul>
+      <br>
       <br>
     </div>
   </section>
@@ -207,6 +219,7 @@
         <li>D3.js grafikon je zapravo skup SVG oblika.</li>
       </ul>
       <br>
+      <br>
     </div>
   </section>
 
@@ -214,7 +227,7 @@
 
   <section id="d3" class="bg">
     <div class="container">
-      <h1>Izmenite elemente pomoću JavaScript i D3.js</h1>
+      <h1>Izmenite elemente pomoću <code>JavaScript</code> i <code>D3.js</code></h1>
       <hr>
       <code>&rarr; Objašnjenje:</code>
       <br>
@@ -224,6 +237,7 @@
         <li>D3.js je JavaScript biblioteka posebno korisna za vizualizaciju podataka. Omogućava kreiranje, odabir i
           izmenu elemenata.</li>
       </ul>
+      <br>
       <br>
     </div>
   </section>
@@ -253,7 +267,7 @@
 
         <!-- ==================== Slika koordinatnog sistema ==================== -->
         <div class="col-lg-5 .align-middle">
-          <img src="img/koordinatniSistem.jpg" alt="">
+          <img id="img1" src="img/koordinatniSistem.jpg" alt="">
         </div>
 
 
@@ -285,6 +299,8 @@
             svg.append("circle")
               .attr("cx", 300).attr("cy", 100).attr("r", 40).style("fill", "green");
           </script></xmp></code></pre>
+          <br>
+          <br>
         </div>
   </section>
 
@@ -310,7 +326,7 @@
 
         <!-- ==================== GRAPH SECTION = WHERE THE GRAPH APPEARS ==================== -->
         <div class="col-lg-5 .align-middle">
-          <img src="img/scale.jpg" alt="">
+          <img id="img1" src="img/scale.jpg" alt="">
         </div>
 
         <!-- ========= show html code ============== -->
@@ -349,6 +365,8 @@
           </script></xmp></code></pre>
         </div>
       </div>
+      <br>
+      <br>
     </div>
   </section>
 
@@ -366,6 +384,7 @@
         <li>Funkcija <b>axisBottom()</b> pravi horizontalnu osu, sa svim oznakama. <b>axisLeft()</b> se koristi za Y
           osu.</li>
       </ul>
+      <br>
       <br>
     </div>
   </section>
@@ -387,7 +406,7 @@
       <br>
       <div class="row">
         <div class="col-lg-5 .align-middle">
-          <img src="img/translation.jpg" alt="">
+          <img id="img1" src="img/translation.jpg" alt="">
         </div>
         <div class="col-lg-7 .align-middle">
 
@@ -440,6 +459,8 @@
           </script></xmp></code></pre>
         </div>
       </div>
+      <br>
+      <br>
     </div>
   </section>
 
@@ -467,7 +488,7 @@
     <div class="row">
   
     <div class="col-lg-5 .align-middle">
-      <img src="img/podaciVezivanja.jpg" alt="">
+      <img id="img1" src="img/podaciVezivanja.jpg" alt="">
     </div>
   
   <div class="col-lg-7 .align-middle">
@@ -535,6 +556,8 @@
   </script></xmp></code></pre>
   </div>
     </div>
+    <br>
+    <br>
   </div>
 </section>
 

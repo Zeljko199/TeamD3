@@ -91,3 +91,24 @@ nav ul li a:hover{
     font-weight: var(--font-medium);
     font-size: 16px;
 }
+#dropdownMenuLink {
+    background-color:rgb(255, 122, 45) !important;
+    color: rgb(255, 255, 255) !important;
+    font-weight: 800;
+}
+.dropdown-menu {
+    background-color: black !important;
+}
+
+.dropdown-item {
+    color:rgb(255, 122, 45) !important;
+    background-color: black;
+}
+.dropdown-item:hover {
+    color:black !important;
+    background-color: rgb(255, 122, 45) !important;
+    
+}
+.nav-link:hover {
+    color: rgb(255, 122, 45) !important;
+}

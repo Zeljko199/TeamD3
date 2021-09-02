@@ -115,6 +115,11 @@ img{
 #odgovor {
     box-shadow: 0 0 15px 0 rgba(255, 137, 3, 0.61);
   }
+/*==================== Sta je D3? =================*/
+#d3_banner{
+     border-radius: 48%;
+}
+
 /*==================== Dodaci ====================*/
 #dodaci{
     padding: 4%;
@@ -205,7 +210,6 @@ img{
   } /*media 1*/
 
 
-<<<<<<< HEAD
 /*  GALERIJA    */
   .jumbotron{
     border-radius: 5%;
@@ -214,7 +218,6 @@ img{
   #galerija{
     margin-top: 80px;
   }
-=======
   /*SLIKA ZA LINE AREA I ARC*/
   .pie-img{
     width: 50 !important; 
@@ -259,4 +262,3 @@ div.desc {
     }
   }
   
->>>>>>> a26f30333f26e335674651578171d324482e746c

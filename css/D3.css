@@ -19,7 +19,7 @@ body{
 }
 
 #Scroll .nav-link {
-  color: grey;
+  color: grey !important;
   box-sizing: border-box;
 }
 
@@ -30,9 +30,6 @@ body{
   background-color: transparent;
   border-radius: 0px;
   box-sizing: border-box;
-}
-.nav-link{
-  color: gray !important;
 }
 
 #Scroll .nav-link:hover {
@@ -47,7 +44,6 @@ body{
 ul{
   display: block;
   list-style-type: disc;
-  margin-top: 1em;
   margin-bottom: 30px;
   margin-left: 0;
   margin-right: 0;
@@ -64,9 +60,7 @@ ul{
 #d3Body {
   background-color: #ffffff;
 }
-.white-col {
-  
-}
+
 xmp {
   background-color: #f3f3f3 !important;
   border-radius: 5px;

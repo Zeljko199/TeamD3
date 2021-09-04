@@ -66,7 +66,7 @@
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <!-- <a class="dropdown-item" href="D3.html">D3</a> -->
                 <a class="dropdown-item" href="shapes.html">- Shapes</a>
-                <a class="dropdown-item" href="line.html">- Line</a>
+                <a class="dropdown-item active-dropdown-item" href="line.html">- Line</a>
                 <a class="dropdown-item" href="arc.html">- Arc</a>
                 <a class="dropdown-item" href="area.html">-Area</a>
               </div>
@@ -151,7 +151,7 @@
               <p>I potom pozivamo <b>lineGenerator</b> sa nizom kao argumentom</p> <br>
               <p class="code" id="code3"> </p>
               <script defer>
-                var codet3 = "&nbsp&nbspvar pathData = lineGenerator(points);<br>&nbsp&nbsp // returns \"M0,80L100,100L200,30L300,50L400,40L500,80\""; 
+                var codet3 = "&nbsp&nbspvar pathData = lineGenerator(points);<br>&nbsp&nbsp"; 
                 var text = codet3.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
                 document.getElementById('code3').innerHTML=text;
               </script>
@@ -168,7 +168,7 @@
                 document.getElementById('code4').innerHTML=text;
               </script> <br><br>
 
-            <svg width="800" height="110">
+            <svg height="110" class="d3-object">
                   <path></path>
             </svg>
               

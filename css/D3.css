@@ -1,6 +1,7 @@
 @import './navbar.css';
 body{
   background-color: #ffffff;
+  margin: 0 !important;
 }
 .short_hr{
     width: 245px;
@@ -22,17 +23,20 @@ body{
   box-sizing: border-box;
 }
 
-#Scroll .nav-link.active {
-  color: black;
+#Scroll .nav-link:active {
+  color: black !important;
   border-left: solid;
   border-color: #69b3a2;
   background-color: transparent;
   border-radius: 0px;
   box-sizing: border-box;
 }
+.nav-link{
+  color: gray !important;
+}
 
 #Scroll .nav-link:hover {
-  color: black;
+  color: black !important;
 }
 
 @media (max-width: 1400px) {
@@ -51,4 +55,21 @@ ul{
 }
 #ul li{
   padding-bottom: 10px;
+}
+#img1 {
+  border-radius: 10px;
+  border: 2px solid black;
+  
+}
+#d3Body {
+  background-color: #ffffff;
+}
+.white-col {
+  
+}
+xmp {
+  background-color: #f3f3f3 !important;
+  border-radius: 5px;
+  padding: 5px !important;
+  padding-left: 10px !important;
 }

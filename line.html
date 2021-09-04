@@ -30,7 +30,7 @@
 
  <!-- D3.JS v4 -->
   <script src="https://d3js.org/d3.v5.js"></script>
-    
+    <title>D3.line</title>
    
 </head>
 
@@ -150,12 +150,12 @@
               <p>I potom pozivamo <b>lineGenerator</b> sa nizom kao argumentom</p> <br>
               <p class="code" id="code3"> </p>
               <script defer>
-                var codet3 = "&nbsp&nbspvar pathData = lineGenerator(points); &nbsp&nbsp<i> // returns \"M0,80L100,100L200,30L300,50L400,40L500,80\"</i>"; 
+                var codet3 = "&nbsp&nbspvar pathData = lineGenerator(points);<br>&nbsp&nbsp // returns \"M0,80L100,100L200,30L300,50L400,40L500,80\""; 
                 var text = codet3.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
                 document.getElementById('code3').innerHTML=text;
               </script>
                 <br>
-              <p>lineGenerator stvara niz naredbi M (premesti u) i L (red u) iz niza tačaka. </p>
+              <p>lineGenerator stvara niz naredbi M (pomeriti do) i L (poravnjati do) iz niza tačaka. </p>
                 <br>
               <p>Može se koristiti pathData za postavljanje d atributa elementa putanje:</p> <br>
 
@@ -186,7 +186,7 @@
 
     <div class="container">
         <script>
-            // Draw the line segment per segment
+            // 
             d3.select("svg")
             .append("path")
             .attr("d", "M100 30 L200 50 L300 90 L400 20 L500 10 L600 60 L700 50 L800 30 L900 50")

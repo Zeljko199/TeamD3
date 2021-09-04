@@ -28,7 +28,7 @@
 
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-  <title>TeamD3</title>
+  <title>Instalacija</title>
 </head>
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -100,9 +100,9 @@
             <li>&nbsp&nbsp 2) Uključivanje biblioteke D3.js iz CDN(Content Delivert Network)</li>
           </ul> <hr>
           <br>
-          <h2 style="color: rgb(255, 190, 147);">Instalacija</h2><hr><br>
+          <h2>Instalacija</h2><hr><br>
           <div class="">
-            <p>Ako koristite npm - <i><b>npm install d3</b></i>. Takođe možete preuzeti najnovije izdanje na <a href="https://github.com/d3/">GitHub -u</a> . Za vanilin HTML u savremenim pregledačima, uvezite D3 iz Skipack -a:</p> <br>
+            <p>Ako koristite npm - <i><b>npm install d3</b></i>. Takođe možete preuzeti najnovije izdanje na <a href="https://github.com/d3/">GitHub -u</a> . Za vanilla HTML u savremenim pregledačima, uvezite D3 iz Skypack -a:</p> <br>
            
             <p class="code p-3" id="code1">
             </p>
@@ -116,11 +116,11 @@
               <br>
             <div>
               <p>
-                Takođe možete koristiti samostalne D3 mikro biblioteke. Na primer, d3-izbor: </p> <br>
+                Takođe možete koristiti samostalne D3 mikro biblioteke. Na primer, d3-selection: </p> <br>
               <p class="code p-3" id="code2"></p>
           
               <script defer>
-                var codet2 = " <script type=\"module\">  <br> &nbsp &nbsp import {selectAll} from \"https://cdn.skypack.dev/d3-selection@3\"; const div = selectAll(\"div\");  <br> <\/script>"; 
+                var codet2 = " <script type=\"module\">  <br> &nbsp &nbsp import {selectAll} from \"https://cdn.skypack.dev/d3-selection@3\"; <br> &nbsp &nbspconst div = selectAll(\"div\");  <br> <\/script>"; 
                 var text = codet2.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
   
                 document.getElementById('code2').innerHTML=text;

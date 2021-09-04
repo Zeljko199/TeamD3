@@ -152,7 +152,7 @@
             <br> <hr> <br>
               <h3>Konfiguracija </h3><br> <hr> <br>
                <p>
-                Možete konfigurirati innerRadius, outerRadius, startAngle, endAngle tako da ih ne morate svaki put prosleđivati:
+                Možete konfigurišete innerRadius, outerRadius, startAngle, endAngle tako da ih ne morate svaki put prosleđivati:
                     </p> <br>
                <p class="code" id="code4"> </p>
                 <script defer>
@@ -160,8 +160,16 @@
                 var text = codet4.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
   
                 document.getElementById('code4').innerHTML=text;
-              </script> <br><br>
-                
+
+              </script> <br><hr><br>
+              <p>Takođe možete da konfigurišete radijus ugla (cornerRadius) i rastojanje između segmenata luka (padAngle i padRadius):</p> <br>
+                <p class="code" id="code5"> </p>
+                 <script defer>
+                  var codet5 = " &nbsp&nbsp arcGenerator<br>&nbsp&nbsp&nbsp&nbsp .padAngle(.02)<br>&nbsp&nbsp&nbsp&nbsp .padRadius(100)<br>&nbsp&nbsp&nbsp&nbsp.cornerRadius(4);"; 
+                  var text = codet5.replace(/<script type=\"module\"[^>]*>/gi, "&lt;script type=\"module\"&gt;").replace(/<\/script[^>]*>/gi, "&lt;/script&gt;");
+    
+                  document.getElementById('code5').innerHTML=text;
+                </script> <br>
                <div>
                    <svg width="700" height="220" ><g transform="translate(300, 110)" id="arc-code"></g> </svg>
                </div>
